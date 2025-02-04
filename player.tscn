@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://mjwykhhnsyeu"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_5r4wu"]
+[ext_resource type="Texture2D" uid="uid://cska6iqn7fnkj" path="res://Slime2_Idle_full.png" id="1_qh3wa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgkk4"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r60ka"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh8t8"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xufgp"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tuqr"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6v03"]
+atlas = ExtResource("1_qh3wa")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81l7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgkk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r60ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh8t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xufgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tuqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6v03")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eu2fq"]
+radius = 86.0
+
+[node name="Player" type="Area2D"]
+position = Vector2(1195, 574)
+script = ExtResource("1_5r4wu")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_81l7y")
+frame_progress = 0.950248
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eu2fq")
