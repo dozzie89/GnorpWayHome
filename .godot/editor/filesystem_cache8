@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1738706363
+player.gd::GDScript::-1::1738705615::0::1::::<>Area2D<>::
+player.tscn::PackedScene::862224692720794364::1738705952::0::1::::<><>::res://player.gd<>uid://cska6iqn7fnkj::::res://art/Slime2_Idle_full.png
+::res://addons/::1738704063
+::res://addons/godot-git-plugin/::1738704911
+git_plugin.gdextension::GDExtension::-1::1712608203::0::1::::<><>::
+plugin.cfg::TextFile::-1::1712608203::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1712608203::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1712608203
+::res://addons/godot-git-plugin/macos/::1712608203
+::res://addons/godot-git-plugin/win64/::1712608203
+::res://art/::1738705280
+icon.svg::CompressedTexture2D::4106367842115456914::1738287647::1738705280::1::::<><>::
+Slime2_Idle_full.png::CompressedTexture2D::6056940135559741529::1738287780::1738705280::1::::<><>::
