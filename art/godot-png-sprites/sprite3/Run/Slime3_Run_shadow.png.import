@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cska6iqn7fnkj"
-path="res://.godot/imported/Slime2_Idle_full.png-dbcbc25cd8118af158511531a68a726c.ctex"
+uid="uid://bxvynqxmmcmib"
+path="res://.godot/imported/Slime3_Run_shadow.png-bcda233a575ec232ee9ba934dc3c983f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Slime2_Idle_full.png"
-dest_files=["res://.godot/imported/Slime2_Idle_full.png-dbcbc25cd8118af158511531a68a726c.ctex"]
+source_file="res://art/godot-png-sprites/sprite3/Run/Slime3_Run_shadow.png"
+dest_files=["res://.godot/imported/Slime3_Run_shadow.png-bcda233a575ec232ee9ba934dc3c983f.ctex"]
 
 [params]
 

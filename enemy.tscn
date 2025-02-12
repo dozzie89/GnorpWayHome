@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://bekeyy7u570nd"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_62gmw"]
+[ext_resource type="Texture2D" uid="uid://dc8315jb2t1q2" path="res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png" id="1_fl4tq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or673"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1x0x"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggrh6"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_058pq"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xolrs"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mvni"]
+atlas = ExtResource("1_fl4tq")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rfb6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or673")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1x0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggrh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_058pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xolrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mvni")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1gvx"]
+radius = 8.0
+height = 16.0
+
+[node name="Enemy" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_62gmw")
+metadata/_edit_group_ = true
+
+[node name="BodySprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8rfb6")
+animation = &"idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r1gvx")
