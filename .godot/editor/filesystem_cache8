@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739926151
+::res://::1739927280
 enemy.gd::GDScript::-1::1739394525::0::1::::<>Area2D<>::
-enemy.tscn::PackedScene::2688106873754842113::1739926151::0::1::::<><>::res://enemy.gd<>uid://dc8315jb2t1q2::::res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png
-main.tscn::PackedScene::8511833539905596016::1739926151::0::1::::<><>::uid://mjwykhhnsyeu::::res://player.tscn<>uid://bekeyy7u570nd::::res://enemy.tscn
+enemy.tscn::PackedScene::2688106873754842113::1739927279::0::1::::<><>::res://enemy.gd<>uid://dc8315jb2t1q2::::res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png
+main.tscn::PackedScene::8511833539905596016::1739927280::0::1::::<><>::uid://mjwykhhnsyeu::::res://player.tscn<>uid://bekeyy7u570nd::::res://enemy.tscn
 player.gd::GDScript::-1::1739394525::0::1::::<>Area2D<>::
-player.tscn::PackedScene::862224692720794364::1739926151::0::1::::<><>::res://player.gd<>uid://sto30bdroyss::::res://art/test sprites/player_base.png<>uid://gjfa78di50bf::::res://art/test sprites/face_1.png
+player.tscn::PackedScene::862224692720794364::1739927279::0::1::::<><>::res://player.gd<>uid://sto30bdroyss::::res://art/test sprites/player_base.png<>uid://gjfa78di50bf::::res://art/test sprites/face_1.png
 ::res://addons/::1738706423
 ::res://addons/godot-git-plugin/::1738706423
 git_plugin.gdextension::GDExtension::-1::1738706423::0::1::::<><>::
@@ -91,10 +91,10 @@ Slime3_Run_shadow.png::CompressedTexture2D::4045597319815717713::1739394525::173
 Slime3_Walk_body.png::CompressedTexture2D::4525504198592741351::1739394525::1739394546::1::::<><>::
 Slime3_Walk_full.png::CompressedTexture2D::2921595320596100449::1739394525::1739394546::1::::<><>::
 Slime3_Walk_shadow.png::CompressedTexture2D::4564572816733174813::1739394525::1739394546::1::::<><>::
-::res://art/test sprites/::1739926602
+::res://art/test sprites/::1739927669
 face_1.png::CompressedTexture2D::440017778452519963::1739394525::1739394546::1::::<><>::
 face_2.png::CompressedTexture2D::7399487034646618528::1739394525::1739394546::1::::<><>::
 face_gnorp_.png::CompressedTexture2D::6740012521175784544::1739925963::1739926148::1::::<><>::
 pickaxe.png::CompressedTexture2D::8635929574460695674::1739394525::1739394546::1::::<><>::
-player_base.png::CompressedTexture2D::1303523717727946870::1739926573::1739926605::1::::<><>::
+player_base.png::CompressedTexture2D::1303523717727946870::1739927653::1739927672::1::::<><>::
 sword.png::CompressedTexture2D::8737800337030077109::1739394525::1739394546::1::::<><>::
