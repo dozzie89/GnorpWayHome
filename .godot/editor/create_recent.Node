@@ -1,5 +1,8 @@
+RigidBody2D
+RayCast2D
+Timer
+TextureRect
 Area2D
 Node
 CollisionShape2D
 AnimatedSprite2D
-RigidBody2D

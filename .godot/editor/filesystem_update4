@@ -1,0 +1,10 @@
+res://player.tscn
+res://player.gd
+res://enemy.tscn
+res://enemy.gd
+res://main.tscn
+res://slot.tscn
+res://tool.tscn
+res://slot.gd
+res://tool.gd
+res://cooldown_timer.gd

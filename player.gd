@@ -5,6 +5,8 @@ extends Area2D
 
 @export var sprint_speed = 1.75
 
+var can_use = true
+
 var screen_size
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +20,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	#movement
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		$BodySprite.animation = "move_right"
@@ -41,8 +45,29 @@ func _process(delta):
 		if Input.is_action_pressed("sprint"):
 			velocity *= sprint_speed
 	else:
-		$BodySprite.animation = "idle_down"
-		$FaceSprite.animation = "idle_down"
+		$BodySprite.animation = "idle"
+		$FaceSprite.animation = "idle"
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	
+	#weapon use
+	if Input.is_action_pressed("use_tool") and can_use:
+		#animation
+		can_use = false
+		$CooldownTimer.start()
+		if $Hitbox.is_colliding():
+			var object = $Hitbox.get_collider()
+			if object.is_in_group("Enemies"):
+				print("enemy detected!")
+				object.take_damage($Tool.damage)
+
+
+func _on_cooldown_timer_timeout() -> void:
+	can_use = true
+
+
+func _on_body_entered() -> void:
+	print("HERE!")
+	queue_free()
