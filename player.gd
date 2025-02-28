@@ -5,6 +5,10 @@ extends Area2D
 
 @export var sprint_speed = 1.75
 
+@export var hit_distance = 150
+
+signal hit
+
 var can_use = true
 
 var screen_size
@@ -54,6 +58,12 @@ func _process(delta):
 	
 	#weapon use
 	if Input.is_action_pressed("use_tool") and can_use:
+		
+		var target = Vector2(get_viewport().get_mouse_position())
+		var vec = target - position
+		vec = hit_distance * vec / vec.length()
+		
+		$Hitbox.target_position = vec
 		#animation
 		can_use = false
 		$CooldownTimer.start()
@@ -62,6 +72,10 @@ func _process(delta):
 			if object.is_in_group("Enemies"):
 				print("enemy detected!")
 				object.take_damage($Tool.damage)
+				
+	if Input.is_action_just_pressed("interact"):
+		#TODO - if colliding with tool, swap them
+		pass
 
 
 func _on_cooldown_timer_timeout() -> void:
@@ -69,5 +83,6 @@ func _on_cooldown_timer_timeout() -> void:
 
 
 func _on_body_entered() -> void:
+	hit.emit()
 	print("HERE!")
 	queue_free()

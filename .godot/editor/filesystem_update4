@@ -8,3 +8,4 @@ res://tool.tscn
 res://slot.gd
 res://tool.gd
 res://cooldown_timer.gd
+res://main.gd

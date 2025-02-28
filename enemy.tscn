@@ -54,8 +54,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1gvx"]
-radius = 6.57143
-height = 13.7143
+radius = 8.28571
+height = 17.1429
 
 [node name="Enemy" type="RigidBody2D" groups=["Enemies"]]
 collision_mask = 0

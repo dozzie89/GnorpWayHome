@@ -16,9 +16,11 @@ func _process(delta: float) -> void:
 
 func take_damage(damage):
 	print("damage: " + str(damage))
-	print("new health: " + str(health))
+	print("old health: " + str(health))
 	
 	health = health - damage
+	
+	print("new health: " + str(health))
 	
 	if health <= 0:
 		#do stuff!
