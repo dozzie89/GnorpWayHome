@@ -1,7 +1,9 @@
-extends RigidBody2D
+extends Area2D
 
 @export var health = 2
 @export var speed = 200
+
+@export var damage = 1
 
 
 # Called when the node enters the scene tree for the first time.

@@ -57,9 +57,8 @@ animations = [{
 radius = 8.28571
 height = 17.1429
 
-[node name="Enemy" type="RigidBody2D" groups=["Enemies"]]
+[node name="Enemy" type="Area2D" groups=["Enemies"]]
 collision_mask = 0
-gravity_scale = 0.0
 script = ExtResource("1_62gmw")
 metadata/_edit_group_ = true
 

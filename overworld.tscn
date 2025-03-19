@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqu1armsrlias"]
+
+[ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
+[ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="2_ls27n"]
+[ext_resource type="PackedScene" uid="uid://bekeyy7u570nd" path="res://enemy.tscn" id="3_10hn7"]
+[ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="4_ikjat"]
+[ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="5_hvs4g"]
+[ext_resource type="PackedScene" uid="uid://bh4pmt8ersk4o" path="res://player_controller.tscn" id="6_mfsuj"]
+
+[node name="Overworld" type="Node"]
+script = ExtResource("1_jifnx")
+
+[node name="Player" parent="." instance=ExtResource("2_ls27n")]
+position = Vector2(919, 656)
+active_player = true
+color = Color(0.380392, 0.682353, 0.407843, 1)
+
+[node name="Player2" parent="." instance=ExtResource("2_ls27n")]
+position = Vector2(466, 297)
+color = Color(0.46384, 0.635312, 1, 1)
+
+[node name="Player3" parent="." instance=ExtResource("2_ls27n")]
+position = Vector2(1392, 306)
+color = Color(0.633185, 0.443932, 0.499398, 1)
+
+[node name="Enemy" parent="." instance=ExtResource("3_10hn7")]
+position = Vector2(564, 606)
+
+[node name="Slot" parent="." instance=ExtResource("4_ikjat")]
+position = Vector2(183, 895)
+
+[node name="Dungeon" parent="." instance=ExtResource("5_hvs4g")]
+position = Vector2(937, 321)
+
+[node name="Control" parent="." instance=ExtResource("6_mfsuj")]
+offset_left = 160.0
+offset_top = -16.0
+offset_right = -1605.0
+offset_bottom = -945.0

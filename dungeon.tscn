@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://chvr8f5s06lpv"]
+
+[ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_esqh4"]
+[ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="2_mexdm"]
+
+[node name="Dungeon" type="Node"]
+
+[node name="Slot" parent="." instance=ExtResource("1_esqh4")]
+position = Vector2(183, 895)
+
+[node name="Dungeon" parent="." instance=ExtResource("2_mexdm")]
+position = Vector2(930, 388)
+in_dungeon = true

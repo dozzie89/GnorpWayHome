@@ -7,6 +7,16 @@ extends Area2D
 
 @export var hit_distance = 150
 
+@export var active_player = false
+
+#temp
+@export var color = Color(0,0,0)
+
+var in_area = false
+var last_area = null
+
+var paused = false
+
 signal hit
 
 var can_use = true
@@ -18,12 +28,20 @@ func _ready() -> void:
 	$CollisionShape2D.disabled = false
 	
 	screen_size = get_viewport_rect().size
+	
+	$BodySprite.animation = "idle"
+	$FaceSprite.animation = "idle"
 	$BodySprite.play()
 	$FaceSprite.play()
+	
+	$BodySprite.modulate = color
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if paused or not active_player:
+		return
 	
 	#movement
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -74,7 +92,11 @@ func _process(delta):
 				object.take_damage($Tool.damage)
 				
 	if Input.is_action_just_pressed("interact"):
-		#TODO - if colliding with tool, swap them
+		print("interact")
+		print(str(in_area))
+		print(str(last_area))
+		if last_area != null:
+			last_area.interact(self)
 		pass
 
 
@@ -84,5 +106,33 @@ func _on_cooldown_timer_timeout() -> void:
 
 func _on_body_entered() -> void:
 	hit.emit()
-	print("HERE!")
+	print("body entered!")
 	queue_free()
+
+
+func _on_area_entered(area: Area2D) -> void:
+	print("area entered")
+	in_area = true
+	last_area = area
+	
+	if area.is_in_group("Enemies"):
+		emit_signal("hit", area.damage)
+
+
+func _on_area_exited(area: Area2D) -> void:
+	#todo - fix! if in an area, leaving another, won't track correctly
+	in_area = false
+	last_area = null
+
+
+func _on_hit(damage) -> void:
+	health -= damage
+	print("ouchie! i'm hit!")
+	if health <= 0:
+		print("i'm dead.")
+		queue_free()
+	
+
+
+func _pause() -> void:
+	paused = !paused

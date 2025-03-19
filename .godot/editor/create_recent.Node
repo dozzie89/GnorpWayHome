@@ -1,8 +1,9 @@
-CollisionShape2D
+Node
+TextureRect
 Area2D
+Sprite2D
+CollisionShape2D
 RigidBody2D
 RayCast2D
 Timer
-TextureRect
-Node
 AnimatedSprite2D
