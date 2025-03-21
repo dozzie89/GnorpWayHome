@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqu1armsrlias"]
+[gd_scene load_steps=8 format=3 uid="uid://dqu1armsrlias"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="2_ls27n"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="4_ikjat"]
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="5_hvs4g"]
 [ext_resource type="PackedScene" uid="uid://bh4pmt8ersk4o" path="res://player_controller.tscn" id="6_mfsuj"]
+[ext_resource type="PackedScene" uid="uid://f3we2dyspcph" path="res://tool.tscn" id="7_15jym"]
 
 [node name="Overworld" type="Node"]
 script = ExtResource("1_jifnx")
@@ -29,7 +30,7 @@ position = Vector2(564, 606)
 [node name="Slot" parent="." instance=ExtResource("4_ikjat")]
 position = Vector2(183, 895)
 
-[node name="Dungeon" parent="." instance=ExtResource("5_hvs4g")]
+[node name="DungeonEntrance" parent="." instance=ExtResource("5_hvs4g")]
 position = Vector2(937, 321)
 
 [node name="Control" parent="." instance=ExtResource("6_mfsuj")]
@@ -37,3 +38,9 @@ offset_left = 160.0
 offset_top = -16.0
 offset_right = -1605.0
 offset_bottom = -945.0
+
+[node name="Tool" parent="." instance=ExtResource("7_15jym")]
+position = Vector2(1508, 925)
+damage = 3
+texture = "res://art/test sprites/sword.png"
+equippable = true

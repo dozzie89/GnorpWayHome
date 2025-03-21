@@ -5,3 +5,9 @@ res://dungeon_entrance.tscn
 res://player_controller.tscn
 res://dungeon.tscn
 res://dungeon_entrance.gd
+res://enemy.gd
+res://tool.tscn
+res://tool.gd
+res://player.gd
+res://slot.tscn
+res://dungeon.gd

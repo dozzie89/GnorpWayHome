@@ -16,11 +16,11 @@ func _process(delta: float) -> void:
 	pass
 
 
-func take_damage(damage):
-	print("damage: " + str(damage))
+func take_damage(in_damage):
+	print("damage: " + str(in_damage))
 	print("old health: " + str(health))
 	
-	health = health - damage
+	health = health - in_damage
 	
 	print("new health: " + str(health))
 	

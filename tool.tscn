@@ -7,7 +7,8 @@
 radius = 9.0
 height = 18.0
 
-[node name="Tool" type="Area2D"]
+[node name="Tool" type="Area2D" groups=["Tools"]]
+scale = Vector2(3, 3)
 script = ExtResource("1_6cek6")
 
 [node name="TextureRect" type="TextureRect" parent="."]

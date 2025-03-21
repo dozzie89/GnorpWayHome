@@ -111,7 +111,9 @@ func _on_body_entered() -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("area entered")
+	if area.is_in_group("Tools") and not area.equippable:
+		return
+	print("area entered!")
 	in_area = true
 	last_area = area
 	
@@ -136,3 +138,20 @@ func _on_hit(damage) -> void:
 
 func _pause() -> void:
 	paused = !paused
+
+func get_tool():
+	return $Tool
+	
+func set_tool(tool):
+	$Tool/TextureRect.texture = tool.get_texture()
+	$Tool.damage = tool.damage
+
+func set_player(player):
+	#todo: update all of these with new info
+	#todo: need different sprites? maybe not
+	health = player.health
+	speed = player.speed
+	sprint_speed = player.sprint_speed
+	hit_distance = player.hit_distance
+	color = player.color
+	set_tool(player.get_tool())

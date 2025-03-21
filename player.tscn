@@ -506,7 +506,6 @@ animation = &"move_up"
 
 [node name="Tool" parent="." instance=ExtResource("4_ngbq6")]
 position = Vector2(-77, -52)
-scale = Vector2(3, 3)
 
 [node name="CooldownTimer" type="Timer" parent="."]
 one_shot = true
