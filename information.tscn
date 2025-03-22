@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgtvs1yoh0kcy"]
+
+[ext_resource type="Script" path="res://information.gd" id="1_bvxri"]
+[ext_resource type="Texture2D" uid="uid://b4d4px1di2g02" path="res://art/test sprites/info_background.png" id="2_wiohc"]
+[ext_resource type="Texture2D" uid="uid://h2nfxvqxklro" path="res://art/test sprites/info.png" id="3_q1jwq"]
+
+[node name="Information" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bvxri")
+
+[node name="Menu" type="TextureRect" parent="."]
+visible = false
+offset_left = 48.0
+offset_top = -107.0
+offset_right = 1968.0
+offset_bottom = 973.0
+texture = ExtResource("2_wiohc")
+
+[node name="Icon" type="TextureRect" parent="."]
+offset_left = 1758.0
+offset_top = 23.0
+offset_right = 1902.0
+offset_bottom = 171.0
+texture = ExtResource("3_q1jwq")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="Icon" to="." method="_on_icon_mouse_entered"]
+[connection signal="mouse_exited" from="Icon" to="." method="_on_icon_mouse_exited"]

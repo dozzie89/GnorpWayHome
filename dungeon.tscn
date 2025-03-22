@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chvr8f5s06lpv"]
+[gd_scene load_steps=5 format=3 uid="uid://chvr8f5s06lpv"]
 
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_esqh4"]
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="2_mexdm"]
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="3_vtse6"]
+[ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="4_yxujc"]
 
 [node name="Dungeon" type="Node"]
 
@@ -17,3 +18,5 @@ in_dungeon = true
 position = Vector2(919, 468)
 active_player = true
 color = Color(0.380392, 0.682353, 0.407843, 1)
+
+[node name="Information" parent="." instance=ExtResource("4_yxujc")]

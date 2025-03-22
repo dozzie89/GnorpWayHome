@@ -1,6 +1,8 @@
+Control
+AnimatedSprite2D
+Node
 Panel
 GridContainer
-Node
 TextureRect
 Area2D
 Sprite2D
@@ -8,4 +10,3 @@ CollisionShape2D
 RigidBody2D
 RayCast2D
 Timer
-AnimatedSprite2D

@@ -11,3 +11,6 @@ res://tool.gd
 res://player.gd
 res://slot.tscn
 res://dungeon.gd
+res://icon.gd
+res://information.tscn
+res://information.gd

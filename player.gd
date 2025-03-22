@@ -155,3 +155,9 @@ func set_player(player):
 	hit_distance = player.hit_distance
 	color = player.color
 	set_tool(player.get_tool())
+
+func generate_icon():
+	var icon = TextureRect.new()
+	icon.add_child($BodySprite)
+	icon.add_child($FaceSprite)
+	return icon
