@@ -9,20 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://f3we2dyspcph" path="res://tool.tscn" id="7_15jym"]
 [ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="8_4erqu"]
 
-[node name="Overworld" type="Node"]
+[node name="Overworld" type="Node" groups=["Overworld"]]
 script = ExtResource("1_jifnx")
 
 [node name="Player" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(919, 656)
+id = 1
 active_player = true
 color = Color(0.380392, 0.682353, 0.407843, 1)
 
 [node name="Player2" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(466, 297)
+id = 2
 color = Color(0.46384, 0.635312, 1, 1)
 
 [node name="Player3" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(1392, 306)
+id = 3
 color = Color(0.633185, 0.443932, 0.499398, 1)
 
 [node name="Enemy" parent="." instance=ExtResource("3_10hn7")]

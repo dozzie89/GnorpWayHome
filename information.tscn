@@ -13,6 +13,7 @@ script = ExtResource("1_bvxri")
 
 [node name="Menu" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 48.0
 offset_top = -107.0
 offset_right = 1968.0
@@ -20,6 +21,7 @@ offset_bottom = 973.0
 texture = ExtResource("2_wiohc")
 
 [node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 1758.0
 offset_top = 23.0
 offset_right = 1902.0

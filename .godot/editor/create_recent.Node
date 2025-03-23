@@ -1,9 +1,10 @@
+TextureRect
+Label
 Control
 AnimatedSprite2D
 Node
 Panel
 GridContainer
-TextureRect
 Area2D
 Sprite2D
 CollisionShape2D

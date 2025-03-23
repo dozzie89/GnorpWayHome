@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var id = 0
+
 @export var health = 3
 @export var speed = 400
 
@@ -35,6 +37,8 @@ func _ready() -> void:
 	$FaceSprite.play()
 	
 	$BodySprite.modulate = color
+	
+	$ActiveIndicator.visible = active_player
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -161,3 +165,10 @@ func generate_icon():
 	icon.add_child($BodySprite)
 	icon.add_child($FaceSprite)
 	return icon
+
+func set_active(s_id):
+	if s_id == id:
+		active_player = true
+	else:
+		active_player = false
+	$ActiveIndicator.visible = active_player

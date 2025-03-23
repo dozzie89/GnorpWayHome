@@ -4,13 +4,10 @@ res://overworld.tscn
 res://dungeon_entrance.tscn
 res://player_controller.tscn
 res://dungeon.tscn
-res://dungeon_entrance.gd
-res://enemy.gd
 res://tool.tscn
-res://tool.gd
-res://player.gd
 res://slot.tscn
-res://dungeon.gd
-res://icon.gd
 res://information.tscn
-res://information.gd
+res://player_slot.gd
+res://overworld.gd
+res://player.gd
+res://player_controller.gd
