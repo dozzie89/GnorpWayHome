@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddomp805pvkoe"
-path="res://.godot/imported/face_2.png-e47c7423cedaa3fa76e56849f081b553.ctex"
+uid="uid://dfblxdhb8ktgm"
+path="res://.godot/imported/gnorp_face.png-050f0adf3bf0591e50302e4c7cf8fd83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/test sprites/face_2.png"
-dest_files=["res://.godot/imported/face_2.png-e47c7423cedaa3fa76e56849f081b553.ctex"]
+source_file="res://art/character-sprites/gnorp_face.png"
+dest_files=["res://.godot/imported/gnorp_face.png-050f0adf3bf0591e50302e4c7cf8fd83.ctex"]
 
 [params]
 
