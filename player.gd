@@ -172,3 +172,6 @@ func set_active(s_id):
 	else:
 		active_player = false
 	$ActiveIndicator.visible = active_player
+
+func interact(player):
+	pass
