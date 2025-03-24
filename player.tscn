@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://mjwykhhnsyeu"]
+[gd_scene load_steps=65 format=3 uid="uid://mjwykhhnsyeu"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_5r4wu"]
 [ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/character-sprites/gnorp_player_base.png" id="2_pp7wi"]
@@ -21,14 +21,6 @@ region = Rect2(72, 0, 36, 50)
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6hcr"]
 atlas = ExtResource("2_pp7wi")
 region = Rect2(108, 0, 36, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ol2jr"]
-atlas = ExtResource("2_pp7wi")
-region = Rect2(144, 0, 36, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tdkrc"]
-atlas = ExtResource("2_pp7wi")
-region = Rect2(180, 0, 36, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bo566"]
 atlas = ExtResource("2_pp7wi")
@@ -140,12 +132,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k6hcr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ol2jr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tdkrc")
 }],
 "loop": true,
 "name": &"idle",
@@ -264,14 +250,6 @@ region = Rect2(72, 0, 36, 50)
 atlas = ExtResource("3_lvrx1")
 region = Rect2(108, 0, 36, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_adtbo"]
-atlas = ExtResource("3_lvrx1")
-region = Rect2(144, 0, 36, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_we28w"]
-atlas = ExtResource("3_lvrx1")
-region = Rect2(180, 0, 36, 50)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fitju"]
 atlas = ExtResource("3_lvrx1")
 region = Rect2(0, 50, 36, 50)
@@ -382,12 +360,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yaxhn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_adtbo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_we28w")
 }],
 "loop": true,
 "name": &"idle",
@@ -493,7 +465,7 @@ script = ExtResource("1_5r4wu")
 [node name="BodySprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_81l7y")
-animation = &"move_up"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_2dkwk")
@@ -502,7 +474,7 @@ shape = SubResource("CapsuleShape2D_2dkwk")
 position = Vector2(0, -6)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_o7w75")
-animation = &"move_up"
+animation = &"idle"
 
 [node name="Tool" parent="." instance=ExtResource("4_ngbq6")]
 position = Vector2(-77, -52)

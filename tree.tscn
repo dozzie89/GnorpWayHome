@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqodwi1bovo84"]
+
+[ext_resource type="Texture2D" uid="uid://5gwsucw7jeqf" path="res://art/environment/tree.png" id="1_4y4c5"]
+[ext_resource type="Script" path="res://tree.gd" id="1_8w156"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iune5"]
+radius = 26.0
+height = 80.0
+
+[node name="Tree" type="RigidBody2D" groups=["Resources"]]
+gravity_scale = 0.0
+script = ExtResource("1_8w156")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-0.999996, -116.159)
+scale = Vector2(2.86364, 2.86364)
+texture = ExtResource("1_4y4c5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Resources"]]
+position = Vector2(1.14441e-05, -40.5)
+shape = SubResource("CapsuleShape2D_iune5")

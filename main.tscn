@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtjgwi7tidh0k"]
+[gd_scene load_steps=9 format=3 uid="uid://dtjgwi7tidh0k"]
 
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="1_s2tof"]
 [ext_resource type="PackedScene" uid="uid://bekeyy7u570nd" path="res://enemy.tscn" id="2_86te4"]
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="3_acy8k"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="4_1r8ft"]
-[ext_resource type="Texture2D" uid="uid://cppxf08y4ere2" path="res://art/environment/ship.png" id="5_lue3q"]
+[ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="5_wnlxp"]
+[ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="6_s88oe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hgsp5"]
 texture = ExtResource("4_1r8ft")
@@ -423,6 +424,8 @@ position = Vector2(564, 606)
 [node name="Slot" parent="." instance=ExtResource("3_acy8k")]
 position = Vector2(9, 905)
 
-[node name="Ship" type="Sprite2D" parent="."]
-position = Vector2(433, 378)
-texture = ExtResource("5_lue3q")
+[node name="Tree" parent="." instance=ExtResource("5_wnlxp")]
+position = Vector2(1482, 342)
+
+[node name="Ore" parent="." instance=ExtResource("6_s88oe")]
+position = Vector2(1007, 538)
