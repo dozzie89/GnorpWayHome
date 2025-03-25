@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sto30bdroyss"
-path="res://.godot/imported/player_base.png-1b1a2cc9ad44e2e72c5e9a5de86f08ba.ctex"
+uid="uid://xbwis38mna5s"
+path="res://.godot/imported/morpho.png-9bcc6ef1610b15195eb353e9606156cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/test sprites/player_base.png"
-dest_files=["res://.godot/imported/player_base.png-1b1a2cc9ad44e2e72c5e9a5de86f08ba.ctex"]
+source_file="res://art/character-sprites/morpho.png"
+dest_files=["res://.godot/imported/morpho.png-9bcc6ef1610b15195eb353e9606156cf.ctex"]
 
 [params]
 

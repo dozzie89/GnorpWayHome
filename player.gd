@@ -94,6 +94,8 @@ func _process(delta):
 			if object.is_in_group("Enemies"):
 				print("enemy detected!")
 				object.take_damage($Tool.damage)
+			elif object.is_in_group("Resources"):
+				object.take_damage($Tool.damage)
 				
 	if Input.is_action_just_pressed("interact"):
 		print("interact")

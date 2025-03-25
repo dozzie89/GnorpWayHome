@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvbkq7d11vauk"
-path="res://.godot/imported/pickaxe.png-12fcaa0100e56ddc005811f452db5652.ctex"
+uid="uid://b807ri4ijorav"
+path="res://.godot/imported/dungeon_ladder_layer.png-6ef2862643f09b3ab4ee1dabdad68f48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/test sprites/pickaxe.png"
-dest_files=["res://.godot/imported/pickaxe.png-12fcaa0100e56ddc005811f452db5652.ctex"]
+source_file="res://art/environment/dungeon_ladder_layer.png"
+dest_files=["res://.godot/imported/dungeon_ladder_layer.png-6ef2862643f09b3ab4ee1dabdad68f48.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ha4kar5vwrl"
-path="res://.godot/imported/gnorp_player_base.png-fdfdce057d1d62356506b7597d65c144.ctex"
+uid="uid://dvbkq7d11vauk"
+path="res://.godot/imported/pickaxe.png-3859656ed826184de553a543e7ad8537.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/test sprites/gnorp_player_base.png"
-dest_files=["res://.godot/imported/gnorp_player_base.png-fdfdce057d1d62356506b7597d65c144.ctex"]
+source_file="res://art/character-sprites/pickaxe.png"
+dest_files=["res://.godot/imported/pickaxe.png-3859656ed826184de553a543e7ad8537.ctex"]
 
 [params]
 
