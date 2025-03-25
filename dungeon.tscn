@@ -1,6 +1,7 @@
-[gd_scene load_steps=75 format=3 uid="uid://chvr8f5s06lpv"]
+[gd_scene load_steps=76 format=3 uid="uid://chvr8f5s06lpv"]
 
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_esqh4"]
+[ext_resource type="Script" path="res://dungeon.gd" id="1_f0cgg"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="1_rn4mn"]
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="2_mexdm"]
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="3_vtse6"]
@@ -892,6 +893,7 @@ animations = [{
 }]
 
 [node name="Dungeon" type="Node"]
+script = ExtResource("1_f0cgg")
 
 [node name="Flooring" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5wv7s")

@@ -592,6 +592,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot2"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -627,6 +628,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot3"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -660,6 +662,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot4"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -693,6 +696,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot5"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -726,6 +730,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot6"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -759,6 +764,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot7"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
@@ -792,6 +798,7 @@ text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot8"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 157.0
 offset_right = 124.0
