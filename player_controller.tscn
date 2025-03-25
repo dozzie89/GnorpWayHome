@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bh4pmt8ersk4o"]
+[gd_scene load_steps=74 format=3 uid="uid://bh4pmt8ersk4o"]
 
 [ext_resource type="Script" path="res://player_controller.gd" id="1_31jip"]
 [ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="1_xwba1"]
@@ -15,6 +15,9 @@ texture = ExtResource("3_akrd0")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2yd0"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0fnv"]
 font_size = 32
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hyxx"]
@@ -525,13 +528,14 @@ theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 100
 columns = 4
 
-[node name="Slot1" type="Panel" parent="Menu/GridContainer"]
+[node name="Slot1" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_gvpto")
 id = 1
 has_player = true
+gnorp_name = "Gnorp"
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot1"]
 layout_mode = 0
@@ -551,13 +555,23 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot2" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot1"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot2" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_gvpto")
 id = 2
 has_player = true
+gnorp_name = "Gnarp"
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot2"]
 layout_mode = 0
@@ -577,13 +591,22 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot3" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot2"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot3" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_gvpto")
 id = 3
 has_player = true
+gnorp_name = "Glarbo"
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot3"]
 layout_mode = 0
@@ -603,7 +626,15 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot4" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot3"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot4" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
@@ -628,7 +659,15 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot5" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot4"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot5" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
@@ -653,7 +692,15 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot6" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot5"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot6" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
@@ -678,7 +725,15 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot7" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot6"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot7" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
@@ -703,7 +758,15 @@ offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
 
-[node name="Slot8" type="Panel" parent="Menu/GridContainer"]
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot7"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot8" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
@@ -727,6 +790,14 @@ offset_right = 112.0
 offset_bottom = 128.0
 text = "false"
 label_settings = SubResource("LabelSettings_h2yd0")
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot8"]
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0

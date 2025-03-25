@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var gnorp_name = 'none'
+
 @export var id = 0
 
 @export var health = 3
@@ -138,10 +140,10 @@ func _on_hit(damage) -> void:
 	print("ouchie! i'm hit!")
 	if health <= 0:
 		print("i'm dead.")
+		get_tree().call_group("Controller", 'player_removed', id)
 		queue_free()
 	
-
-
+	
 func _pause() -> void:
 	paused = !paused
 

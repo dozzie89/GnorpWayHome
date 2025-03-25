@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="9_y1xm3"]
 [ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="10_ra8mo"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_el3ca"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1567"]
 texture = ExtResource("2_dl68e")
 2:0/0 = 0
 3:0/0 = 0
@@ -412,7 +412,7 @@ texture = ExtResource("2_dl68e")
 1:27/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jct3w"]
-sources/1 = SubResource("TileSetAtlasSource_el3ca")
+sources/1 = SubResource("TileSetAtlasSource_x1567")
 
 [node name="Overworld" type="Node" groups=["Overworld"]]
 script = ExtResource("1_jifnx")
@@ -424,17 +424,20 @@ layer_0/tile_data = PackedInt32Array(0, 1, 12, 65536, 1, 13, 1, 65537, 12, 65537
 
 [node name="Player" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(919, 656)
+gnorp_name = "Gnorp"
 id = 1
 active_player = true
 color = Color(0.380392, 0.682353, 0.407843, 1)
 
 [node name="Player2" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(466, 297)
+gnorp_name = "Gnarp"
 id = 2
 color = Color(0.46384, 0.635312, 1, 1)
 
 [node name="Player3" parent="." instance=ExtResource("2_ls27n")]
 position = Vector2(1392, 306)
+gnorp_name = "Glarbo"
 id = 3
 color = Color(0.633185, 0.443932, 0.499398, 1)
 
@@ -459,10 +462,10 @@ damage = 3
 texture = "res://art/character-sprites/sword.png"
 equippable = true
 
-[node name="Information" parent="." instance=ExtResource("8_4erqu")]
-
 [node name="Tree" parent="." instance=ExtResource("9_y1xm3")]
 position = Vector2(1639, 622)
 
 [node name="Ore" parent="." instance=ExtResource("10_ra8mo")]
 position = Vector2(1373, 774)
+
+[node name="Information" parent="." instance=ExtResource("8_4erqu")]
