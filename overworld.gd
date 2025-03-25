@@ -20,3 +20,6 @@ func get_player(id):
 	if id == 3:
 		return $Player3
 	return null
+
+func add_player(g_name):
+	return

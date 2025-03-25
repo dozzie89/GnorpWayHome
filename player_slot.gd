@@ -32,3 +32,11 @@ func update_slot():
 	$IdLabel.text = str(id)
 	$HasPlayerLabel.text = str(has_player)
 	$NameLabel.text = gnorp_name
+
+func player_added(g_id, g_name):
+	if g_id == id:
+		if has_player == true:
+			return false
+		has_player = true
+		gnorp_name = g_name
+		update_slot()
