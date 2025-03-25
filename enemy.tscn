@@ -54,17 +54,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1gvx"]
-radius = 8.0
-height = 16.0
+radius = 8.28571
+height = 17.1429
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=["Enemies"]]
 collision_mask = 0
 script = ExtResource("1_62gmw")
 metadata/_edit_group_ = true
 
 [node name="BodySprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_8rfb6")
 animation = &"idle_down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemies"]]
+scale = Vector2(3.5, 3.5)
 shape = SubResource("CapsuleShape2D_r1gvx")

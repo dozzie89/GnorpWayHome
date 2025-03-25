@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbhxgb5ume203"]
+
+[ext_resource type="Script" path="res://slot.gd" id="1_773rx"]
+[ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/character-sprites/slot.png" id="1_shf36"]
+[ext_resource type="PackedScene" uid="uid://f3we2dyspcph" path="res://tool.tscn" id="2_p3s68"]
+
+[node name="Slot" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_773rx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_shf36")
+
+[node name="Tool" parent="." instance=ExtResource("2_p3s68")]
+position = Vector2(-36, -48)
+scale = Vector2(8, 8)
