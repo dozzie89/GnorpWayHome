@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://mjwykhhnsyeu"]
+[gd_scene load_steps=66 format=3 uid="uid://mjwykhhnsyeu"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_5r4wu"]
 [ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/character-sprites/gnorp_player_base.png" id="2_pp7wi"]

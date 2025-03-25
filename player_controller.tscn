@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://player_controller.gd" id="1_31jip"]
 [ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="1_xwba1"]
 [ext_resource type="Texture2D" uid="uid://dwykphpjspvv3" path="res://art/test sprites/player_icon.png" id="2_02poj"]
-[ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/test sprites/gnorp_player_base.png" id="3_3nass"]
-[ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/test sprites/slot.png" id="3_akrd0"]
-[ext_resource type="Texture2D" uid="uid://dfblxdhb8ktgm" path="res://art/test sprites/gnorp_face.png" id="4_0xlw1"]
+[ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/character-sprites/gnorp_player_base.png" id="3_3nass"]
+[ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/character-sprites/slot.png" id="3_akrd0"]
+[ext_resource type="Texture2D" uid="uid://dfblxdhb8ktgm" path="res://art/character-sprites/gnorp_face.png" id="4_0xlw1"]
 [ext_resource type="Script" path="res://player_slot.gd" id="4_gvpto"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2yl4"]
@@ -560,6 +560,7 @@ id = 2
 has_player = true
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot2"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -568,6 +569,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot2"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -584,6 +586,7 @@ id = 3
 has_player = true
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot3"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -592,6 +595,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot3"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -607,6 +611,7 @@ script = ExtResource("4_gvpto")
 id = 4
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot4"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -615,6 +620,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot4"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -630,6 +636,7 @@ script = ExtResource("4_gvpto")
 id = 5
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot5"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -638,6 +645,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot5"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -653,6 +661,7 @@ script = ExtResource("4_gvpto")
 id = 6
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot6"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -661,6 +670,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot6"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -676,6 +686,7 @@ script = ExtResource("4_gvpto")
 id = 7
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot7"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -684,6 +695,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot7"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0
@@ -699,6 +711,7 @@ script = ExtResource("4_gvpto")
 id = 8
 
 [node name="IdLabel" type="Label" parent="Menu/GridContainer/Slot8"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 30.0
 offset_right = 104.0
@@ -707,6 +720,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
 [node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot8"]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 83.0
 offset_right = 112.0

@@ -2,7 +2,7 @@ extends Node2D
 
 @export var damage = 1
 
-@export var texture = "res://art/test sprites/pickaxe.png"
+@export var texture = "res://art/character-sprites/pickaxe.png"
 
 @export var equippable = false
 

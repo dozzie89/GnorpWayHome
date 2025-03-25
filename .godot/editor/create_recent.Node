@@ -1,5 +1,7 @@
+TextureRect
+Label
+RigidBody2D
 Area2D
 Node
 CollisionShape2D
 AnimatedSprite2D
-RigidBody2D

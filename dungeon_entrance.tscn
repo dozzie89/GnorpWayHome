@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://n1fm5gtiy1ng"]
 
-[ext_resource type="Texture2D" uid="uid://bkfoo1le2ijaw" path="res://art/test sprites/dungeon_entrance.png" id="1_6avht"]
 [ext_resource type="Script" path="res://dungeon_entrance.gd" id="1_r3my4"]
+[ext_resource type="Texture2D" uid="uid://cadn4rgfslitv" path="res://art/environment/dungeon_entrance.png" id="2_mf1i3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isjub"]
 size = Vector2(249, 258)
@@ -15,4 +15,4 @@ position = Vector2(-19.5, -21)
 shape = SubResource("RectangleShape2D_isjub")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_6avht")
+texture = ExtResource("2_mf1i3")
