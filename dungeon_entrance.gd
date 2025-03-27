@@ -13,14 +13,25 @@ func _process(delta: float) -> void:
 
 
 func interact(player) -> void:
-	print("here")
-	#player.position = Vector2(0, 0)
-	if(in_dungeon):
+	print("oh boy")
+	for node in get_tree().current_scene.get_children():
+		print(node)
+	
+	print("interacting with dungeon")
+	if(in_dungeon):		
 		get_tree().change_scene_to_file("res://overworld.tscn")
+
 		#todo: update player after leaving dungeon
 		#new tool, health, etcs
 	else:
-		#var scene = preload("res://dungeon.tscn")
-		#get_tree().change_scene_to_packed(scene)
+		#get_tree().call_group("StateManager", "save_game")
+		#get_tree().call_group("StateManager", "save_player", player)
+		get_tree().current_scene.queue_free()
 		
-		get_tree().change_scene_to_file("res://dungeon.tscn")
+		var dungeon = preload("res://dungeon.tscn")
+		var dungeon_scene := dungeon.instantiate()
+		
+		get_tree().root.add_child(dungeon_scene)
+		get_tree().current_scene = dungeon_scene
+		
+		get_tree().current_scene.get_player().set_player(player)

@@ -17,6 +17,6 @@ offset_bottom = 50.0
 texture = ExtResource("1_y1uof")
 stretch_mode = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Persist"]]
 position = Vector2(24, 27)
 shape = SubResource("CapsuleShape2D_yj7vb")

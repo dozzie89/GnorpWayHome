@@ -35,6 +35,8 @@ Overworld=""
 Resources=""
 Controller=""
 Inventory=""
+Persist="nodes that need to be saved"
+StateManager=""
 
 [input]
 

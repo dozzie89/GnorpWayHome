@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dqu1armsrlias"]
+[gd_scene load_steps=17 format=3 uid="uid://dqu1armsrlias"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="2_dl68e"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="9_y1xm3"]
 [ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="10_ra8mo"]
 [ext_resource type="PackedScene" uid="uid://wl4i4cwgflbu" path="res://inventory.tscn" id="12_xvk1a"]
+[ext_resource type="PackedScene" uid="uid://cka8e2jp2cljm" path="res://state_manager.tscn" id="13_7a6c7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1567"]
 texture = ExtResource("2_dl68e")
@@ -452,6 +453,7 @@ position = Vector2(564, 606)
 position = Vector2(183, 895)
 
 [node name="DungeonEntrance" parent="." instance=ExtResource("5_hvs4g")]
+process_mode = 3
 position = Vector2(868, 339)
 
 [node name="PlayerController" parent="." instance=ExtResource("6_mfsuj")]
@@ -478,3 +480,5 @@ position = Vector2(1373, 774)
 text = "testing testing
 testing testing"
 label_settings = SubResource("LabelSettings_24n1k")
+
+[node name="StateManager" parent="." instance=ExtResource("13_7a6c7")]

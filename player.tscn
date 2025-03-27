@@ -459,7 +459,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Area2D" groups=["Players"]]
+[node name="Player" type="Area2D" groups=["Persist", "Players"]]
 position = Vector2(1195, 598)
 script = ExtResource("1_5r4wu")
 

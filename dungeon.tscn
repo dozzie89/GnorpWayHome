@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://chvr8f5s06lpv"]
+[gd_scene load_steps=77 format=3 uid="uid://chvr8f5s06lpv"]
 
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_esqh4"]
 [ext_resource type="Script" path="res://dungeon.gd" id="1_f0cgg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="2_mexdm"]
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="3_vtse6"]
 [ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="4_yxujc"]
+[ext_resource type="PackedScene" uid="uid://cka8e2jp2cljm" path="res://state_manager.tscn" id="5_rhikf"]
 [ext_resource type="Texture2D" uid="uid://dwykphpjspvv3" path="res://art/test sprites/player_icon.png" id="6_xvlch"]
 [ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/character-sprites/gnorp_player_base.png" id="7_l6xp6"]
 [ext_resource type="Texture2D" uid="uid://dfblxdhb8ktgm" path="res://art/character-sprites/gnorp_face.png" id="8_ejxp5"]
@@ -912,9 +913,6 @@ in the full game you can come in, kill enemies,
 and get resources"
 label_settings = SubResource("LabelSettings_xkwe7")
 
-[node name="Slot" parent="." instance=ExtResource("1_esqh4")]
-position = Vector2(183, 895)
-
 [node name="DungeonEntrance" parent="." instance=ExtResource("2_mexdm")]
 position = Vector2(930, 388)
 in_dungeon = true
@@ -923,6 +921,9 @@ in_dungeon = true
 position = Vector2(919, 468)
 active_player = true
 color = Color(0.380392, 0.682353, 0.407843, 1)
+
+[node name="Slot" parent="." instance=ExtResource("1_esqh4")]
+position = Vector2(183, 895)
 
 [node name="Information" parent="." instance=ExtResource("4_yxujc")]
 
@@ -955,3 +956,5 @@ offset_right = 118.0
 offset_bottom = 126.0
 texture = ExtResource("9_uonys")
 expand_mode = 1
+
+[node name="StateManager" parent="." instance=ExtResource("5_rhikf")]

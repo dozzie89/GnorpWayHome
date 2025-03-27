@@ -100,9 +100,6 @@ func _process(delta):
 				object.take_damage($Tool.damage)
 				
 	if Input.is_action_just_pressed("interact"):
-		print("interact")
-		print(str(in_area))
-		print(str(last_area))
 		if last_area != null:
 			last_area.interact(self)
 		pass
@@ -122,14 +119,15 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Tools") and not area.equippable:
 		return
 	print("area entered!")
+	print(area)
 	in_area = true
 	last_area = area
 	
 	if area.is_in_group("Enemies"):
 		emit_signal("hit", area.damage)
 
-
 func _on_area_exited(area: Area2D) -> void:
+	print("area left")
 	#todo - fix! if in an area, leaving another, won't track correctly
 	in_area = false
 	last_area = null
@@ -163,6 +161,11 @@ func set_player(player):
 	hit_distance = player.hit_distance
 	color = player.color
 	set_tool(player.get_tool())
+	
+	$BodySprite.modulate = color
+	
+	in_area = false
+	last_area = null
 
 func generate_icon():
 	var icon = TextureRect.new()
