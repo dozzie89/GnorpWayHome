@@ -24,14 +24,14 @@ func interact(player) -> void:
 		#todo: update player after leaving dungeon
 		#new tool, health, etcs
 	else:
-		#get_tree().call_group("StateManager", "save_game")
-		#get_tree().call_group("StateManager", "save_player", player)
-		get_tree().current_scene.queue_free()
+		get_tree().change_scene_to_file("res://dungeon.tscn")
 		
-		var dungeon = preload("res://dungeon.tscn")
-		var dungeon_scene := dungeon.instantiate()
+		#get_tree().current_scene.queue_free()
 		
-		get_tree().root.add_child(dungeon_scene)
-		get_tree().current_scene = dungeon_scene
+		#var dungeon = preload("res://dungeon.tscn")
+		#var dungeon_scene := dungeon.instantiate()
 		
-		get_tree().current_scene.get_player().set_player(player)
+		#get_tree().root.add_child(dungeon_scene)
+		#get_tree().current_scene = dungeon_scene
+		
+		#get_tree().current_scene.get_player().set_player(player)
