@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqu1armsrlias"]
+[gd_scene load_steps=16 format=3 uid="uid://dqu1armsrlias"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="2_dl68e"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="8_4erqu"]
 [ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="9_y1xm3"]
 [ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="10_ra8mo"]
+[ext_resource type="PackedScene" uid="uid://wl4i4cwgflbu" path="res://inventory.tscn" id="12_xvk1a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1567"]
 texture = ExtResource("2_dl68e")
@@ -414,6 +415,9 @@ texture = ExtResource("2_dl68e")
 [sub_resource type="TileSet" id="TileSet_jct3w"]
 sources/1 = SubResource("TileSetAtlasSource_x1567")
 
+[sub_resource type="LabelSettings" id="LabelSettings_24n1k"]
+font_size = 48
+
 [node name="Overworld" type="Node" groups=["Overworld"]]
 script = ExtResource("1_jifnx")
 
@@ -469,3 +473,8 @@ position = Vector2(1639, 622)
 position = Vector2(1373, 774)
 
 [node name="Information" parent="." instance=ExtResource("8_4erqu")]
+
+[node name="Inventory" parent="." instance=ExtResource("12_xvk1a")]
+text = "testing testing
+testing testing"
+label_settings = SubResource("LabelSettings_24n1k")

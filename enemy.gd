@@ -26,4 +26,5 @@ func take_damage(in_damage):
 	
 	if health <= 0:
 		#do stuff!
+		get_tree().call_group("Inventory", "add_resources", "Goopa", 2)
 		queue_free()

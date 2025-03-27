@@ -9,6 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$TextureRect.texture = load(texture)
+	$CollisionShape2D.disabled = not equippable
 
 func interact(player) -> void:
 	if not equippable:
@@ -16,9 +17,13 @@ func interact(player) -> void:
 	var temp_tool = player.get_tool()
 	var temp_texture = temp_tool.get_texture()
 	var temp_damage = temp_tool.damage
+	
+	equippable = false
 
 	player.set_tool(self)
 	set_tool(temp_texture, temp_damage)
+	
+	equippable = true
 	
 func get_texture():
 	return $TextureRect.texture

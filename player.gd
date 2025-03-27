@@ -9,7 +9,7 @@ extends Area2D
 
 @export var sprint_speed = 1.75
 
-@export var hit_distance = 150
+@export var hit_distance = 200
 
 @export var active_player = false
 
