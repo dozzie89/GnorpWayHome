@@ -6,6 +6,7 @@ var mouse_in_ui = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
+	#TODO: update icon, etc.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
