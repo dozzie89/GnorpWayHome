@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://o6mjwmqp4arc"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_gj5xd"]
+[ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_lp3xt"]
+[ext_resource type="PackedScene" uid="uid://bh4pmt8ersk4o" path="res://player_controller.tscn" id="2_nscvk"]
+[ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="3_k6ahv"]
+[ext_resource type="PackedScene" uid="uid://wl4i4cwgflbu" path="res://inventory.tscn" id="4_6rj4e"]
+[ext_resource type="PackedScene" uid="uid://bvpvmbb280lmb" path="res://build_controller.tscn" id="6_gwydr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x8qt6"]
+font_size = 48
+
+[node name="UI" type="Camera2D" groups=["Camera"]]
+script = ExtResource("1_gj5xd")
+
+[node name="Slot" parent="." instance=ExtResource("1_lp3xt")]
+position = Vector2(-777, 361)
+
+[node name="Control" parent="." instance=ExtResource("2_nscvk")]
+offset_left = -799.0
+offset_top = -548.0
+offset_right = -799.0
+offset_bottom = -548.0
+
+[node name="Information" parent="." instance=ExtResource("3_k6ahv")]
+offset_left = -967.0
+offset_top = -540.0
+offset_right = -927.0
+offset_bottom = -500.0
+
+[node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
+offset_left = -937.0
+offset_top = -515.0
+offset_right = -606.0
+offset_bottom = -378.0
+text = "testing testing
+testing testing"
+label_settings = SubResource("LabelSettings_x8qt6")
+
+[node name="BuildControl" parent="." instance=ExtResource("6_gwydr")]
+offset_left = -830.0
+offset_top = -545.0
+offset_right = -830.0
+offset_bottom = -545.0

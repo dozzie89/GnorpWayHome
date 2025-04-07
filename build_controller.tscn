@@ -1,0 +1,192 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvpvmbb280lmb"]
+
+[ext_resource type="Script" path="res://build_controller.gd" id="1_or57d"]
+[ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="2_2ogyc"]
+[ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/character-sprites/slot.png" id="3_jjt4y"]
+[ext_resource type="Script" path="res://build_slot.gd" id="4_hjg5x"]
+[ext_resource type="Texture2D" uid="uid://dwykphpjspvv3" path="res://art/test sprites/player_icon.png" id="5_x848y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2yl4"]
+texture = ExtResource("3_jjt4y")
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0fnv"]
+font_size = 32
+
+[node name="BuildControl" type="Control" groups=["Persist"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 4.0
+offset_right = 148.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_or57d")
+
+[node name="Menu" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 145.0
+offset_top = 152.0
+offset_right = 1425.0
+offset_bottom = 872.0
+texture = ExtResource("2_2ogyc")
+
+[node name="GridContainer" type="GridContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 139.0
+offset_right = 1001.0
+offset_bottom = 636.0
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 100
+columns = 4
+
+[node name="Slot1" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+unlocked = true
+build_name = "House"
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot1"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot2" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+build_name = "Woodcutter"
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot2"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot3" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+build_name = "Stonecutter"
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot3"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot4" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+build_name = "Playground"
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot4"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot5" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot5"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot6" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot6"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot7" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot7"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Slot8" type="Panel" parent="Menu/GridContainer" groups=["Controller"]]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
+script = ExtResource("4_hjg5x")
+
+[node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot8"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 202.0
+text = "Gnorp"
+label_settings = SubResource("LabelSettings_o0fnv")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 912.0
+offset_right = 1759.0
+offset_bottom = 1060.0
+texture = ExtResource("5_x848y")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot1" to="Menu/GridContainer/Slot1" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot2" to="Menu/GridContainer/Slot2" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot3" to="Menu/GridContainer/Slot3" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot4" to="Menu/GridContainer/Slot4" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot5" to="Menu/GridContainer/Slot5" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot6" to="Menu/GridContainer/Slot6" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot7" to="Menu/GridContainer/Slot7" method="_on_gui_input"]
+[connection signal="gui_input" from="Menu/GridContainer/Slot8" to="Menu/GridContainer/Slot8" method="_on_gui_input"]
+[connection signal="mouse_entered" from="Icon" to="." method="_on_icon_mouse_entered"]
+[connection signal="mouse_exited" from="Icon" to="." method="_on_icon_mouse_exited"]

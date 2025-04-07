@@ -77,13 +77,13 @@ func _process(delta):
 		$FaceSprite.animation = "idle"
 		
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	#position = position.clamp(Vector2.ZERO, screen_size)
 	
 	
 	#weapon use
 	if Input.is_action_pressed("use_tool") and can_use:
 		
-		var target = Vector2(get_viewport().get_mouse_position())
+		var target = Vector2(get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2)
 		var vec = target - position
 		vec = hit_distance * vec / vec.length()
 		
@@ -176,9 +176,13 @@ func generate_icon():
 func set_active(s_id):
 	if s_id == id:
 		active_player = true
+		get_tree().call_group("Camera", "update_player", self)
 	else:
 		active_player = false
 	$ActiveIndicator.visible = active_player
 
 func interact(player):
 	pass
+
+func get_timer():
+	return $CooldownTimer

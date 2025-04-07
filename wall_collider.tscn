@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://byt6x177ardkd"]
+
+[ext_resource type="Texture2D" uid="uid://xbwis38mna5s" path="res://art/character-sprites/morpho.png" id="1_7qmgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okprq"]
+size = Vector2(16.5, 16)
+
+[node name="WallCollider" type="StaticBody2D" groups=["Solid"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_okprq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7qmgy")

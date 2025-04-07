@@ -37,6 +37,8 @@ Controller=""
 Inventory=""
 Persist="nodes that need to be saved"
 StateManager=""
+Solid=""
+Camera=""
 
 [input]
 
