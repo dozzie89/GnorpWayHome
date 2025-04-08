@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bh4pmt8ersk4o"]
+[gd_scene load_steps=73 format=3 uid="uid://bh4pmt8ersk4o"]
 
 [ext_resource type="Script" path="res://build_controller.gd" id="1_1lxow"]
 [ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="1_xwba1"]
@@ -12,9 +12,6 @@
 texture = ExtResource("3_akrd0")
 
 [sub_resource type="LabelSettings" id="LabelSettings_mj2pe"]
-font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_h2yd0"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_o0fnv"]
@@ -546,15 +543,6 @@ offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot1"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
-
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot1"]
 layout_mode = 0
 offset_left = 27.0
@@ -581,15 +569,6 @@ offset_right = 104.0
 offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
-
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot2"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot2"]
 layout_mode = 0
@@ -618,15 +597,6 @@ offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot3"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
-
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot3"]
 layout_mode = 0
 offset_left = 27.0
@@ -651,15 +621,6 @@ offset_right = 104.0
 offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
-
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot4"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot4"]
 layout_mode = 0
@@ -686,15 +647,6 @@ offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot5"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
-
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot5"]
 layout_mode = 0
 offset_left = 27.0
@@ -719,15 +671,6 @@ offset_right = 104.0
 offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
-
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot6"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot6"]
 layout_mode = 0
@@ -754,15 +697,6 @@ offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
 
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot7"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
-
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot7"]
 layout_mode = 0
 offset_left = 27.0
@@ -787,15 +721,6 @@ offset_right = 104.0
 offset_bottom = 75.0
 text = "0"
 label_settings = SubResource("LabelSettings_mj2pe")
-
-[node name="HasPlayerLabel" type="Label" parent="Menu/GridContainer/Slot8"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 128.0
-text = "false"
-label_settings = SubResource("LabelSettings_h2yd0")
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot8"]
 layout_mode = 0

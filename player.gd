@@ -19,13 +19,11 @@ extends Area2D
 var in_area = false
 var last_area = null
 
-var paused = false
-
-signal hit
-
 var can_use = true
 
 var screen_size
+
+signal hit
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,8 +43,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	if paused or not active_player:
+	if get_tree().root.get_child(0).get_paused() or not active_player:
 		return
 	
 	#movement
@@ -109,10 +106,10 @@ func _on_cooldown_timer_timeout() -> void:
 	can_use = true
 
 
-func _on_body_entered() -> void:
-	hit.emit()
-	print("body entered!")
-	queue_free()
+#func _on_body_entered() -> void:
+#	hit.emit()
+#	print("body entered!")
+#	queue_free()
 
 
 func _on_area_entered(area: Area2D) -> void:
@@ -129,21 +126,22 @@ func _on_area_entered(area: Area2D) -> void:
 func _on_area_exited(area: Area2D) -> void:
 	print("area left")
 	#todo - fix! if in an area, leaving another, won't track correctly
-	in_area = false
-	last_area = null
+	if last_area == area:
+		in_area = false
+		last_area = null
 
 
 func _on_hit(damage) -> void:
 	health -= damage
-	print("ouchie! i'm hit!")
+	print("ouchie! i'm hit! health: ", health)
 	if health <= 0:
 		print("i'm dead.")
-		get_tree().call_group("Controller", 'player_removed', id)
-		queue_free()
+		kill()
 	
 	
 func _pause() -> void:
-	paused = !paused
+	var ow = get_tree().root.get_child(0)
+	ow.set_paused(!ow.get_paused())
 
 func get_tool():
 	return $Tool
@@ -177,12 +175,17 @@ func set_active(s_id):
 	if s_id == id:
 		active_player = true
 		get_tree().call_group("Camera", "update_player", self)
+		get_tree().call_group("Slot", "update_slot", get_tool())
 	else:
 		active_player = false
 	$ActiveIndicator.visible = active_player
 
-func interact(player):
+func interact(_player):
 	pass
 
 func get_timer():
 	return $CooldownTimer
+
+func kill():
+	get_tree().call_group("Controller", 'player_removed', id)
+	queue_free()

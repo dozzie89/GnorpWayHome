@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvpvmbb280lmb"]
+[gd_scene load_steps=9 format=3 uid="uid://bvpvmbb280lmb"]
 
 [ext_resource type="Script" path="res://build_controller.gd" id="1_or57d"]
 [ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="2_2ogyc"]
@@ -11,6 +11,9 @@ texture = ExtResource("3_jjt4y")
 
 [sub_resource type="LabelSettings" id="LabelSettings_o0fnv"]
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_n8epa"]
+font_size = 48
 
 [node name="BuildControl" type="Control" groups=["Persist"]]
 layout_mode = 3
@@ -177,6 +180,24 @@ offset_right = 1759.0
 offset_bottom = 1060.0
 texture = ExtResource("5_x848y")
 expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -294.0
+offset_top = -96.0
+offset_right = 1992.0
+offset_bottom = 1207.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 327.0
+offset_top = 140.0
+offset_right = 1313.0
+offset_bottom = 207.0
+text = "Click where you'd like to place the building"
+label_settings = SubResource("LabelSettings_n8epa")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

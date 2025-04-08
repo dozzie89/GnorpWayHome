@@ -9,3 +9,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func get_collider():
+	return $CollisionShape2D
+
+
+func interact(player):
+	print('\"I\'m in a glass house digging up stones\" - joe p')
+	player.kill()

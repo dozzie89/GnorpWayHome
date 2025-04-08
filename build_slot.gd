@@ -9,8 +9,10 @@ var placed = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$NameLabel.text = build_name
-	if unlocked:
+	if unlocked and not placed:
 		modulate = Color(0, 255, 0)
+	else:
+		modulate = Color(1, 1, 1)
 	building = preload("res://house.tscn").instantiate()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,28 +25,49 @@ func _on_gui_input(event: InputEvent) -> void:
 			if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 				print("left clicked on build slot")
 				get_parent().get_parent().visible = false
-				place_building()
+				get_parent().get_parent().get_parent().get_node("Button").visible = true
+				get_parent().get_parent().get_parent().get_node("Label").visible = true
+				await place_building()
 				get_parent().get_parent().visible = true
+				get_parent().get_parent().get_parent().get_node("Button").visible = false
+				get_parent().get_parent().get_parent().get_node("Label").visible = false
 				
 func update_slot():
 	$NameLabel.text = build_name
-	if unlocked:
+	if unlocked and not placed:
 		modulate = Color(0, 255, 0)
+	else:
+		modulate = Color(1, 1, 1)
 
 func place_building():
-	if placed:
-		return
-	building.position = get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2
-	get_tree().root.add_child(building)
-	placed = true
-	#var mouse = get_viewport().get_mouse_position()
+	var result = [true]
 	
-	#var v1 = mouse
-	#var v2 = mouse
-	
-	#var space_state = get_world_2d().direct_space_state
-	#var query = PhysicsRayQueryParameters2D.create(v1,v2)
-	#var result = space_state.intersect_ray(query)
-	
-	#if result:
-	#	print("Hit at point: ", result.position)
+	while result:
+		if placed:
+			return
+		print("starting placement")
+		await get_parent().get_parent().get_parent().get_node("Button").button_up
+		print("left click pressed")
+		var mouse = get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2
+		building.position = mouse
+				
+		var bounds = building.get_collider().shape.extents
+		
+		var v1 = mouse - bounds/2
+		var v2 = mouse + bounds/2
+		
+		var space_state = get_world_2d().direct_space_state
+		var query = PhysicsRayQueryParameters2D.create(v1,v2)
+		query.set_collide_with_areas(true)
+		query.set_hit_from_inside(true)
+		result = space_state.intersect_ray(query)
+		
+		if result:
+			print("Hit at point: ", result.position)
+			get_parent().get_parent().get_parent().get_node("Label").text = "Can't place on top of " + str(result['collider'].name)
+		else:
+			get_tree().call_group("Overworld", "add_building", building)
+			placed = true
+			print("NO COLLISIONS DETECTED!!!")
+			update_slot()
+			break

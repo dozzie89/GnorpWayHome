@@ -24,6 +24,8 @@ func interact(player) -> void:
 	set_tool(temp_texture, temp_damage)
 	
 	equippable = true
+
+	get_tree().call_group("Slot", "update_slot", player.get_tool())
 	
 func get_texture():
 	return $TextureRect.texture

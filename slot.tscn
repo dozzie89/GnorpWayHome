@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/character-sprites/slot.png" id="1_shf36"]
 [ext_resource type="PackedScene" uid="uid://f3we2dyspcph" path="res://tool.tscn" id="2_p3s68"]
 
-[node name="Slot" type="Node2D"]
+[node name="Slot" type="Node2D" groups=["Slot"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_773rx")
 

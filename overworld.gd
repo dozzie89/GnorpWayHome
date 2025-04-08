@@ -1,5 +1,6 @@
 extends Node
 
+@export var paused = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,3 +17,12 @@ func get_player(id):
 
 func add_player(g_name):
 	return
+
+func add_building(building):
+	$Buildings.add_child(building)
+
+func get_paused():
+	return paused
+	
+func set_paused(p):
+	paused = p
