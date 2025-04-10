@@ -13,7 +13,15 @@ func _ready() -> void:
 		modulate = Color(0, 255, 0)
 	else:
 		modulate = Color(1, 1, 1)
-	building = preload("res://house.tscn").instantiate()
+	match id:
+		1:
+			building = preload("res://house.tscn").instantiate()
+		2:
+			building = preload("res://woodcutter.tscn").instantiate()
+		3:
+			building = preload("res://stonecutter.tscn").instantiate()
+		_:
+			pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -70,4 +78,6 @@ func place_building():
 			placed = true
 			print("NO COLLISIONS DETECTED!!!")
 			update_slot()
+			
+			get_tree().call_group("Inventory", "add_resources", building.resource, -building.num)
 			break

@@ -2,6 +2,9 @@ extends Area2D
 
 class_name Building
 
+var resource = ''
+var num = 3
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

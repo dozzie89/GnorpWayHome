@@ -4,7 +4,8 @@ extends Area2D
 
 @export var id = 0
 
-@export var health = 3
+var health
+@export var max_health = 3
 @export var speed = 400
 
 @export var sprint_speed = 1.75
@@ -27,6 +28,7 @@ signal hit
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	health = max_health
 	$CollisionShape2D.disabled = false
 	
 	screen_size = get_viewport_rect().size

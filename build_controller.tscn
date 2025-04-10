@@ -52,6 +52,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
+id = 1
 unlocked = true
 build_name = "House"
 
@@ -69,7 +70,9 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
-build_name = "Woodcutter"
+id = 2
+unlocked = true
+build_name = "Wood"
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot2"]
 layout_mode = 0
@@ -85,7 +88,9 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
-build_name = "Stonecutter"
+id = 3
+unlocked = true
+build_name = "Stone"
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot3"]
 layout_mode = 0
@@ -101,7 +106,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
-build_name = "Playground"
+id = 4
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot4"]
 layout_mode = 0
@@ -117,6 +122,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
+id = 5
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot5"]
 layout_mode = 0
@@ -132,6 +138,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
+id = 6
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot6"]
 layout_mode = 0
@@ -147,6 +154,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
+id = 7
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot7"]
 layout_mode = 0
@@ -162,6 +170,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g2yl4")
 script = ExtResource("4_hjg5x")
+id = 8
 
 [node name="NameLabel" type="Label" parent="Menu/GridContainer/Slot8"]
 layout_mode = 0
