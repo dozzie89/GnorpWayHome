@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1jsirb1b427u"
-path="res://.godot/imported/slot.png-1d4fbff512affc5ae9d7d0025f97ddc2.ctex"
+uid="uid://c4cwmv5nwg2yd"
+path="res://.godot/imported/cant-select.png-4439ffd378ab6af30eddbac35e50f140.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/character-sprites/slot.png"
-dest_files=["res://.godot/imported/slot.png-1d4fbff512affc5ae9d7d0025f97ddc2.ctex"]
+source_file="res://art/test sprites/cant-select.png"
+dest_files=["res://.godot/imported/cant-select.png-4439ffd378ab6af30eddbac35e50f140.ctex"]
 
 [params]
 

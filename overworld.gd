@@ -15,9 +15,6 @@ func get_player(id):
 		return $Player3
 	return null
 
-func add_player(g_name):
-	return
-
 func add_building(building):
 	$Buildings.add_child(building)
 

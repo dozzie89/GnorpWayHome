@@ -14,8 +14,8 @@ func _ready() -> void:
 	$NameLabel.text = gnorp_name
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _process(delta: float) -> void:
+#	pass
 
 func _on_gui_input(event: InputEvent) -> void:
 	if has_player:

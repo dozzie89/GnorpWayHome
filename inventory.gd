@@ -16,11 +16,10 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _process(delta: float) -> void:
+#	pass
 
 func add_resources(r_name, r_num):
-	var resource = null
 	print(r_name)
 	match r_name:
 		"Spriggi":

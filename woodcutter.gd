@@ -8,5 +8,5 @@ func _ready() -> void:
 func get_collider():
 	return $CollisionShape2D
 
-func interact(player):
+func interact(_player):
 	get_tree().call_group("Inventory", "add_resources", "Spriggi", 1)
