@@ -1,17 +1,14 @@
-extends Node2D
+extends Label
 
-#add signal when active player is switched
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	text = "Click on a topic to learn more!"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
-
-func update_slot(tool):
-	print("wowowow")
-	$Tool/TextureRect.texture = tool.get_texture()
+func update(inf_text):
+	text = inf_text

@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgtvs1yoh0kcy"]
+[gd_scene load_steps=12 format=3 uid="uid://dgtvs1yoh0kcy"]
 
 [ext_resource type="Script" path="res://information.gd" id="1_bvxri"]
-[ext_resource type="Texture2D" uid="uid://b4d4px1di2g02" path="res://art/test sprites/info_background.png" id="2_wiohc"]
+[ext_resource type="Texture2D" uid="uid://ddt3e1t43axcv" path="res://art/test sprites/gnorp_info_menu.png" id="2_qh3sm"]
+[ext_resource type="Texture2D" uid="uid://c8630m1irq2gb" path="res://art/info-bars/info_bar_overview.png" id="3_72ccy"]
+[ext_resource type="Texture2D" uid="uid://dxxfcrsrsx2lp" path="res://art/info-bars/info_bar_gnorps.png" id="3_n5jco"]
 [ext_resource type="Texture2D" uid="uid://h2nfxvqxklro" path="res://art/test sprites/info.png" id="3_q1jwq"]
+[ext_resource type="Script" path="res://info_button.gd" id="4_e74s1"]
+[ext_resource type="Texture2D" uid="uid://drmsrtm6em3n2" path="res://art/info-bars/info_bar_tools.png" id="5_wsppg"]
+[ext_resource type="Texture2D" uid="uid://dgkuywjwg5py4" path="res://art/info-bars/info_bar_dungeon.png" id="6_1yyhg"]
+[ext_resource type="Texture2D" uid="uid://ct0paf15ss55h" path="res://art/info-bars/info_bar_overworld.png" id="7_h64q8"]
+[ext_resource type="Script" path="res://info_text.gd" id="8_vqi0h"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_26e78"]
-size = Vector2(400, 150)
+[sub_resource type="LabelSettings" id="LabelSettings_8e3f5"]
+font_size = 64
 
 [node name="Information" type="Control"]
 layout_mode = 3
@@ -21,53 +28,67 @@ offset_left = 48.0
 offset_top = -107.0
 offset_right = 1968.0
 offset_bottom = 973.0
-texture = ExtResource("2_wiohc")
+texture = ExtResource("2_qh3sm")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Menu"]
+clip_contents = false
 layout_mode = 0
-offset_left = 260.0
-offset_top = 162.0
-offset_right = 722.0
-offset_bottom = 934.0
+offset_left = 241.0
+offset_top = 161.0
+offset_right = 596.0
+offset_bottom = 933.0
 scale = Vector2(1.48, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/ScrollContainer"]
 layout_mode = 2
 
-[node name="VScrollBar" type="VScrollBar" parent="Menu/ScrollContainer/VBoxContainer"]
+[node name="OverviewButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+icon = ExtResource("3_72ccy")
+flat = true
+script = ExtResource("4_e74s1")
+inf_text = "Hello!Testing!Wow!"
 
-[node name="Button" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+[node name="GnorpButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
+icon = ExtResource("3_n5jco")
+flat = true
+script = ExtResource("4_e74s1")
+inf_text = "gnorp gnorp info"
 
-[node name="Button2" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+[node name="ToolButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
+icon = ExtResource("5_wsppg")
+flat = true
+script = ExtResource("4_e74s1")
+inf_text = "tool information..."
 
-[node name="Button3" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+[node name="DungeonButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
+icon = ExtResource("6_1yyhg")
+flat = true
+script = ExtResource("4_e74s1")
+inf_text = "dungeon information :flushed:"
 
-[node name="Button4" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+[node name="OverworldButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
+icon = ExtResource("7_h64q8")
+flat = true
+script = ExtResource("4_e74s1")
+inf_text = "overworld information <3"
 
-[node name="Button5" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
-
-[node name="Button6" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-icon = SubResource("PlaceholderTexture2D_26e78")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Menu"]
+[node name="Label" type="Label" parent="Menu" groups=["InfoText"]]
 layout_mode = 0
-offset_left = 995.0
-offset_top = 178.0
-offset_right = 1035.0
-offset_bottom = 218.0
-scale = Vector2(15.88, 18.2)
+offset_left = 803.0
+offset_top = 163.0
+offset_right = 1650.0
+offset_bottom = 929.0
+text = "Hello!
+Testing!
+Wow!"
+label_settings = SubResource("LabelSettings_8e3f5")
+autowrap_mode = 2
+script = ExtResource("8_vqi0h")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0
@@ -78,5 +99,10 @@ offset_bottom = 171.0
 texture = ExtResource("3_q1jwq")
 expand_mode = 1
 
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverviewButton" to="Menu/ScrollContainer/VBoxContainer/OverviewButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/GnorpButton" to="Menu/ScrollContainer/VBoxContainer/GnorpButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/ToolButton" to="Menu/ScrollContainer/VBoxContainer/ToolButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/DungeonButton" to="Menu/ScrollContainer/VBoxContainer/DungeonButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverworldButton" to="Menu/ScrollContainer/VBoxContainer/OverworldButton" method="_on_button_up"]
 [connection signal="mouse_entered" from="Icon" to="." method="_on_icon_mouse_entered"]
 [connection signal="mouse_exited" from="Icon" to="." method="_on_icon_mouse_exited"]

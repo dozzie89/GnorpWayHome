@@ -13,10 +13,19 @@ font_size = 48
 [node name="UI" type="Camera2D" groups=["Camera"]]
 script = ExtResource("1_gj5xd")
 
+[node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
+offset_left = -937.0
+offset_top = -515.0
+offset_right = -606.0
+offset_bottom = -378.0
+text = "testing testing
+testing testing"
+label_settings = SubResource("LabelSettings_x8qt6")
+
 [node name="Slot" parent="." instance=ExtResource("1_lp3xt")]
 position = Vector2(-777, 361)
 
-[node name="Control" parent="." instance=ExtResource("2_nscvk")]
+[node name="PlayerController" parent="." instance=ExtResource("2_nscvk")]
 offset_left = -799.0
 offset_top = -548.0
 offset_right = -799.0
@@ -27,15 +36,6 @@ offset_left = -967.0
 offset_top = -540.0
 offset_right = -927.0
 offset_bottom = -500.0
-
-[node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
-offset_left = -937.0
-offset_top = -515.0
-offset_right = -606.0
-offset_bottom = -378.0
-text = "testing testing
-testing testing"
-label_settings = SubResource("LabelSettings_x8qt6")
 
 [node name="BuildControl" parent="." instance=ExtResource("6_gwydr")]
 offset_left = -830.0

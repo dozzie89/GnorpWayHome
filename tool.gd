@@ -10,6 +10,9 @@ extends Node2D
 func _ready() -> void:
 	$TextureRect.texture = load(texture)
 	$CollisionShape2D.disabled = not equippable
+	
+func _process(_delta: float) -> void:
+	pass
 
 func interact(player) -> void:
 	if not equippable:

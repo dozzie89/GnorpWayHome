@@ -6,7 +6,10 @@ class_name Resources
 @export var resource_type = " "
 @export var drops = {"unnamed resource": 0}
 
-func _ready():
+func _ready() -> void:
+	pass
+	
+func _process(_delta: float) -> void:
 	pass
 
 func take_damage(amount): # Getting chopped down

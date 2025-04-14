@@ -13,7 +13,8 @@ config_version=5
 config/name="Gnorpotype"
 run/main_scene="res://title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://art/icon.svg"
+config/icon="res://art/icon.svg"
 
 [display]
 
@@ -40,6 +41,7 @@ StateManager=""
 Solid=""
 Camera=""
 Slot=""
+InfoText=""
 
 [input]
 

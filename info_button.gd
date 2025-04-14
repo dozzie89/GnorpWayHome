@@ -1,6 +1,7 @@
-extends Node2D
+extends Button
 
-#add signal when active player is switched
+@export var inf_text = 'todo text'
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +12,5 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-
-func update_slot(tool):
-	print("wowowow")
-	$Tool/TextureRect.texture = tool.get_texture()
+func _on_button_up() -> void:
+	get_tree().call_group("InfoText", "update", inf_text)

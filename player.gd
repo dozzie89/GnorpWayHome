@@ -29,6 +29,10 @@ signal hit
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	health = max_health
+	
+	$ProgressBar.max_value = max_health
+	$ProgressBar.value = health
+	
 	$CollisionShape2D.disabled = false
 	
 	screen_size = get_viewport_rect().size
@@ -135,6 +139,7 @@ func _on_area_exited(area: Area2D) -> void:
 
 func _on_hit(damage) -> void:
 	health -= damage
+	$ProgressBar.value = health
 	print("ouchie! i'm hit! health: ", health)
 	if health <= 0:
 		print("i'm dead.")

@@ -1,12 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqu1armsrlias"]
+[gd_scene load_steps=11 format=3 uid="uid://dqu1armsrlias"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="2_dl68e"]
 [ext_resource type="PackedScene" uid="uid://mjwykhhnsyeu" path="res://player.tscn" id="2_ls27n"]
-[ext_resource type="PackedScene" uid="uid://bekeyy7u570nd" path="res://enemy.tscn" id="3_10hn7"]
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="5_hvs4g"]
 [ext_resource type="PackedScene" uid="uid://o6mjwmqp4arc" path="res://ui.tscn" id="5_r8yb5"]
-[ext_resource type="PackedScene" uid="uid://f3we2dyspcph" path="res://tool.tscn" id="7_15jym"]
 [ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="9_y1xm3"]
 [ext_resource type="PackedScene" uid="uid://byt6x177ardkd" path="res://wall_collider.tscn" id="10_6y5xo"]
 [ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="10_ra8mo"]
@@ -427,6 +425,10 @@ layer_0/tile_data = PackedInt32Array(0, 1, 12, 65536, 1, 13, 1, 65537, 12, 65537
 process_mode = 3
 position = Vector2(868, 339)
 teleport_location = NodePath("../DungeonExit")
+does_generate = true
+spawn1 = Vector2(850, 500)
+spawn2 = Vector2(1300, -500)
+spawn3 = Vector2(2500, 0)
 
 [node name="DungeonExit" parent="." node_paths=PackedStringArray("teleport_location") instance=ExtResource("5_hvs4g")]
 process_mode = 3
@@ -452,19 +454,6 @@ gnorp_name = "Glarbo"
 id = 3
 color = Color(0.633185, 0.443932, 0.499398, 1)
 
-[node name="Enemy" parent="." instance=ExtResource("3_10hn7")]
-position = Vector2(1095, -4087)
-
-[node name="Enemy2" parent="." instance=ExtResource("3_10hn7")]
-position = Vector2(1782, -3563)
-damage = 2
-
-[node name="Tool" parent="." instance=ExtResource("7_15jym")]
-position = Vector2(2553, -3838)
-damage = 3
-texture = "res://art/character-sprites/sword.png"
-equippable = true
-
 [node name="Tree" parent="." instance=ExtResource("9_y1xm3")]
 position = Vector2(1639, 622)
 
@@ -476,5 +465,6 @@ position = Vector2(919, 656)
 player = NodePath("../Player")
 
 [node name="WallCollider" parent="." instance=ExtResource("10_6y5xo")]
+visible = false
 position = Vector2(697, -16)
 scale = Vector2(43.52, 1)

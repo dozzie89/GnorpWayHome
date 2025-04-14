@@ -9,11 +9,14 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$BodySprite.play()
+	
+	$ProgressBar.max_value = health
+	$ProgressBar.value = health
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func _process(_delta: float) -> void:
+	pass
 
 
 func take_damage(in_damage):
@@ -21,6 +24,7 @@ func take_damage(in_damage):
 	print("old health: " + str(health))
 	
 	health = health - in_damage
+	$ProgressBar.value = health
 	
 	print("new health: " + str(health))
 	

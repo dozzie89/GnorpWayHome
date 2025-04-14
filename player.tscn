@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://mjwykhhnsyeu"]
+[gd_scene load_steps=67 format=3 uid="uid://mjwykhhnsyeu"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_5r4wu"]
 [ext_resource type="Texture2D" uid="uid://c6ha4kar5vwrl" path="res://art/character-sprites/gnorp_player_base.png" id="2_pp7wi"]
@@ -459,6 +459,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7an0"]
+bg_color = Color(0, 0.909804, 0.223529, 1)
+
 [node name="Player" type="Area2D" groups=["Persist", "Players"]]
 position = Vector2(1195, 598)
 script = ExtResource("1_5r4wu")
@@ -491,11 +494,19 @@ collide_with_areas = true
 [node name="ActiveIndicator" type="TextureRect" parent="."]
 visible = false
 offset_left = -15.0
-offset_top = -120.0
+offset_top = -157.0
 offset_right = 15.0
-offset_bottom = -76.0
+offset_bottom = -113.0
 texture = ExtResource("6_asbbb")
 expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -42.0
+offset_top = -108.0
+offset_right = 45.0
+offset_bottom = -81.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_d7an0")
+show_percentage = false
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
