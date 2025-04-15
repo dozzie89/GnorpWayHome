@@ -43,6 +43,7 @@ func set_tool(ttexture, tdamage):
 
 func show_menu(b):
 	if b:
+		$Label.text = "damage: " + str(damage)
 		$Label.visible = true
 	else:
 		$Label.visible = false

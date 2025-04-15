@@ -40,7 +40,7 @@ func _ready() -> void:
 						You can attack enemies or break resources using your tool, and you will do more or less damage based on which tool you use.
 						
 						To swap tools, push E on a tool on the floor.
-						To view tool damage, walk up to a tool on the floor."
+						To view tool damage, walk up to a tool on the floor or move your mouse over the tool slot in the bottom left."
 		5:
 			inf_text = "Dungeon:
 				

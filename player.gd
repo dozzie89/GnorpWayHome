@@ -51,24 +51,30 @@ func _ready() -> void:
 func _process(delta):
 	if get_tree().root.get_child(0).get_paused() or not active_player:
 		return
+		
+	var diag = false
 	
 	#movement
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
+		diag = true
 		$BodySprite.animation = "move_right"
 		$FaceSprite.animation = "move_right"
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
+		diag = true
 		$BodySprite.animation = "move_left"
 		$FaceSprite.animation = "move_left"
 		velocity.x -= 1
 	if Input.is_action_pressed("move_down"):
-		$BodySprite.animation = "move_down"
-		$FaceSprite.animation = "move_down"
+		if not diag:
+			$BodySprite.animation = "move_down"
+			$FaceSprite.animation = "move_down"
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
-		$BodySprite.animation = "move_up"
-		$FaceSprite.animation = "move_up"
+		if not diag:
+			$BodySprite.animation = "move_up"
+			$FaceSprite.animation = "move_up"
 		velocity.y -= 1
 
 	if velocity.length() > 0:
