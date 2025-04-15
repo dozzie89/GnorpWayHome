@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://etygjnhabpd6"]
+[gd_scene load_steps=6 format=3 uid="uid://etygjnhabpd6"]
 
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="1_1pjh5"]
 [ext_resource type="Script" path="res://title.gd" id="1_04d2e"]
@@ -407,8 +407,8 @@ sources/1 = SubResource("TileSetAtlasSource_roxvp")
 
 [sub_resource type="LabelSettings" id="LabelSettings_yiqaq"]
 font_size = 128
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_7iv1h"]
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Title" type="Node"]
 script = ExtResource("1_04d2e")
@@ -433,6 +433,5 @@ offset_right = 682.0
 offset_bottom = 656.0
 scale = Vector2(5, 5)
 text = "CLICK HERE TO START"
-icon = SubResource("CanvasTexture_7iv1h")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

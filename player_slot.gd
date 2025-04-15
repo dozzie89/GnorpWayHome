@@ -21,7 +21,6 @@ func _on_gui_input(event: InputEvent) -> void:
 	if has_player:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-				print("left clicked on player slot")
 				get_tree().call_group("Players", "set_active", id)
 
 func player_removed(g_id):

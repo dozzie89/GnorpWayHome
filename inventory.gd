@@ -20,7 +20,6 @@ func _process(_delta: float) -> void:
 	pass
 
 func add_resources(r_name, r_num):
-	print(r_name)
 	match r_name:
 		"Spriggi":
 			wood += r_num
@@ -29,7 +28,7 @@ func add_resources(r_name, r_num):
 		"Goopa":
 			slime += r_num
 		_:
-			print("error with resource - invalid name")
+			push_error("error with resource - invalid name")
 	update_label()
 
 func update_label():

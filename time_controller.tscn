@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://w2y81drrfocy"]
+
+[ext_resource type="Script" path="res://time_controller.gd" id="1_cnj8v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cw87c"]
+font_size = 72
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="TimeController" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cnj8v")
+cnst = 0.008
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Day: 0
+Time: 0.00"
+label_settings = SubResource("LabelSettings_cw87c")

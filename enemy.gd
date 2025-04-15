@@ -20,14 +20,9 @@ func _process(_delta: float) -> void:
 
 
 func take_damage(in_damage):
-	print("damage: " + str(in_damage))
-	print("old health: " + str(health))
-	
 	health = health - in_damage
 	$ProgressBar.value = health
-	
-	print("new health: " + str(health))
-	
+		
 	if health <= 0:
 		#do stuff!
 		get_tree().call_group("Inventory", "add_resources", "Goopa", 2)

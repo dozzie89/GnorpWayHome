@@ -2,6 +2,8 @@ extends Control
 
 var mouse_in_ui = false
 
+var first_click = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,13 +15,15 @@ func _process(_delta: float) -> void:
 		#bring up menu, "pause game?"
 		$Menu.visible = !$Menu.visible
 		get_tree().call_group("Players", "_pause")
+		
+		if first_click:
+			$Start.visible = false
+			first_click = false
 
 
 func _on_icon_mouse_entered() -> void:
-	print("mouse entering ui icon")
 	mouse_in_ui = true
 
 
 func _on_icon_mouse_exited() -> void:
-	print("mouse leaving ui icon")
 	mouse_in_ui = false

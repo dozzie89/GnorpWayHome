@@ -11,6 +11,8 @@ func _ready() -> void:
 	$TextureRect.texture = load(texture)
 	$CollisionShape2D.disabled = not equippable
 	
+	$Label.text = "damage: " + str(damage)
+	
 func _process(_delta: float) -> void:
 	pass
 
@@ -20,6 +22,8 @@ func interact(player) -> void:
 	var temp_tool = player.get_tool()
 	var temp_texture = temp_tool.get_texture()
 	var temp_damage = temp_tool.damage
+	
+	show_menu(false)
 	
 	equippable = false
 
@@ -36,3 +40,9 @@ func get_texture():
 func set_tool(ttexture, tdamage):
 	$TextureRect.texture = ttexture
 	damage = tdamage
+
+func show_menu(b):
+	if b:
+		$Label.visible = true
+	else:
+		$Label.visible = false

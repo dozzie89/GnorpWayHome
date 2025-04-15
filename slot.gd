@@ -13,5 +13,4 @@ func _process(_delta: float) -> void:
 
 
 func update_slot(tool):
-	print("wowowow")
 	$Tool/TextureRect.texture = tool.get_texture()

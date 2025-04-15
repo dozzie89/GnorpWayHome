@@ -31,7 +31,6 @@ func _on_gui_input(event: InputEvent) -> void:
 	if unlocked:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-				print("left clicked on build slot")
 				get_parent().get_parent().visible = false
 				get_parent().get_parent().get_parent().get_node("Button").visible = true
 				get_parent().get_parent().get_parent().get_node("Label").visible = true
@@ -53,9 +52,7 @@ func place_building():
 	while result:
 		if placed:
 			return
-		print("starting placement")
 		await get_parent().get_parent().get_parent().get_node("Button").button_up
-		print("left click pressed")
 		var mouse = get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2
 		building.position = mouse
 				
@@ -71,13 +68,11 @@ func place_building():
 		result = space_state.intersect_ray(query)
 		
 		if result:
-			print("Hit at point: ", result.position)
 			get_parent().get_parent().get_parent().get_node("Label").text = "Can't place on top of " + str(result['collider'].name)
 		else:
 			get_tree().call_group("Overworld", "add_building", building)
 			placed = true
-			print("NO COLLISIONS DETECTED!!!")
 			update_slot()
 			
-			get_tree().call_group("Inventory", "add_resources", building.resource, -building.num)
+			#get_tree().call_group("Inventory", "add_resources", building.resource, -building.num)
 			break

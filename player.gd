@@ -97,7 +97,6 @@ func _process(delta):
 		if $Hitbox.is_colliding():
 			var object = $Hitbox.get_collider()
 			if object.is_in_group("Enemies"):
-				print("enemy detected!")
 				object.take_damage($Tool.damage)
 			elif object.is_in_group("Resources"):
 				object.take_damage($Tool.damage)
@@ -106,45 +105,34 @@ func _process(delta):
 		if last_area != null:
 			last_area.interact(self)
 		pass
-
-
+		
 func _on_cooldown_timer_timeout() -> void:
 	can_use = true
-
-
-#func _on_body_entered() -> void:
-#	hit.emit()
-#	print("body entered!")
-#	queue_free()
-
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Tools") and not area.equippable:
 		return
-	print("area entered!")
-	print(area)
 	in_area = true
 	last_area = area
 	
 	if area.is_in_group("Enemies"):
-		emit_signal("hit", area.damage)
+		hit.emit(area.damage)
+	if area.is_in_group("Tools"):
+		area.show_menu(true)
 
 func _on_area_exited(area: Area2D) -> void:
-	print("area left")
-	#todo - fix! if in an area, leaving another, won't track correctly
 	if last_area == area:
 		in_area = false
 		last_area = null
+		if area.is_in_group("Tools"):
+			area.show_menu(false)
 
 
 func _on_hit(damage) -> void:
 	health -= damage
 	$ProgressBar.value = health
-	print("ouchie! i'm hit! health: ", health)
 	if health <= 0:
-		print("i'm dead.")
 		kill()
-	
 	
 func _pause() -> void:
 	var ow = get_tree().root.get_child(0)

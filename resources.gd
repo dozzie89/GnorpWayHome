@@ -21,5 +21,4 @@ func take_damage(amount): # Getting chopped down
 
 func drop_resources():
 	for resource_name in drops:
-		print("Dropping " + str(drops[resource_name]) + " " + resource_name + " (" + resource_type + ")")
 		get_tree().call_group("Inventory", "add_resources", resource_type, drops[resource_name])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://o6mjwmqp4arc"]
+[gd_scene load_steps=9 format=3 uid="uid://o6mjwmqp4arc"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_gj5xd"]
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_lp3xt"]
@@ -6,12 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://dgtvs1yoh0kcy" path="res://information.tscn" id="3_k6ahv"]
 [ext_resource type="PackedScene" uid="uid://wl4i4cwgflbu" path="res://inventory.tscn" id="4_6rj4e"]
 [ext_resource type="PackedScene" uid="uid://bvpvmbb280lmb" path="res://build_controller.tscn" id="6_gwydr"]
+[ext_resource type="PackedScene" uid="uid://w2y81drrfocy" path="res://time_controller.tscn" id="7_iwlpl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x8qt6"]
 font_size = 48
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="UI" type="Camera2D" groups=["Camera"]]
 script = ExtResource("1_gj5xd")
+
+[node name="TimeController" parent="." instance=ExtResource("7_iwlpl")]
+offset_left = -942.0
+offset_top = 157.0
+offset_right = -942.0
+offset_bottom = 157.0
 
 [node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
 offset_left = -937.0

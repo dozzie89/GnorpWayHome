@@ -9,6 +9,9 @@ func get_collider():
 
 
 func interact(player):
+	if not usable: 
+		return
 	if player.health < player.max_health:
 		player.health += 1
-		print("healed one damage!")
+		usable = false
+		modulate = Color(1, 0, 0)

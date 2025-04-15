@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgtvs1yoh0kcy"]
+[gd_scene load_steps=16 format=3 uid="uid://dgtvs1yoh0kcy"]
 
 [ext_resource type="Script" path="res://information.gd" id="1_bvxri"]
 [ext_resource type="Texture2D" uid="uid://ddt3e1t43axcv" path="res://art/test sprites/gnorp_info_menu.png" id="2_qh3sm"]
@@ -6,13 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dxxfcrsrsx2lp" path="res://art/info-bars/info_bar_gnorps.png" id="3_n5jco"]
 [ext_resource type="Texture2D" uid="uid://h2nfxvqxklro" path="res://art/test sprites/info.png" id="3_q1jwq"]
 [ext_resource type="Script" path="res://info_button.gd" id="4_e74s1"]
+[ext_resource type="Texture2D" uid="uid://cj1km1qjgxxlc" path="res://art/info-bars/info_bar_controls.png" id="5_wawyo"]
 [ext_resource type="Texture2D" uid="uid://drmsrtm6em3n2" path="res://art/info-bars/info_bar_tools.png" id="5_wsppg"]
 [ext_resource type="Texture2D" uid="uid://dgkuywjwg5py4" path="res://art/info-bars/info_bar_dungeon.png" id="6_1yyhg"]
 [ext_resource type="Texture2D" uid="uid://ct0paf15ss55h" path="res://art/info-bars/info_bar_overworld.png" id="7_h64q8"]
 [ext_resource type="Script" path="res://info_text.gd" id="8_vqi0h"]
+[ext_resource type="Texture2D" uid="uid://btk8gcw8oehdt" path="res://art/info-bars/info_bar_enemies.png" id="9_dqcx7"]
+[ext_resource type="Texture2D" uid="uid://dpp8aafjil0xn" path="res://art/info-bars/info_bar_buildings.png" id="10_isbl5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8e3f5"]
-font_size = 64
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_eve4b"]
+font_size = 128
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Information" type="Control"]
 layout_mode = 3
@@ -31,7 +39,6 @@ offset_bottom = 973.0
 texture = ExtResource("2_qh3sm")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Menu"]
-clip_contents = false
 layout_mode = 0
 offset_left = 241.0
 offset_top = 161.0
@@ -47,35 +54,56 @@ layout_mode = 2
 icon = ExtResource("3_72ccy")
 flat = true
 script = ExtResource("4_e74s1")
-inf_text = "Hello!Testing!Wow!"
+id = 1
+
+[node name="ControlsButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_wawyo")
+flat = true
+script = ExtResource("4_e74s1")
+id = 2
 
 [node name="GnorpButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_n5jco")
 flat = true
 script = ExtResource("4_e74s1")
-inf_text = "gnorp gnorp info"
+id = 3
 
 [node name="ToolButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("5_wsppg")
 flat = true
 script = ExtResource("4_e74s1")
-inf_text = "tool information..."
+id = 4
 
 [node name="DungeonButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("6_1yyhg")
 flat = true
 script = ExtResource("4_e74s1")
-inf_text = "dungeon information :flushed:"
+id = 5
 
 [node name="OverworldButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("7_h64q8")
 flat = true
 script = ExtResource("4_e74s1")
-inf_text = "overworld information <3"
+id = 6
+
+[node name="EnemiesButton" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("9_dqcx7")
+flat = true
+script = ExtResource("4_e74s1")
+id = 7
+
+[node name="Buildings" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("10_isbl5")
+flat = true
+script = ExtResource("4_e74s1")
+id = 8
 
 [node name="Label" type="Label" parent="Menu" groups=["InfoText"]]
 layout_mode = 0
@@ -99,10 +127,22 @@ offset_bottom = 171.0
 texture = ExtResource("3_q1jwq")
 expand_mode = 1
 
+[node name="Start" type="Label" parent="."]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 10.0
+offset_right = 1739.0
+offset_bottom = 185.0
+text = "START HERE ->"
+label_settings = SubResource("LabelSettings_eve4b")
+
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverviewButton" to="Menu/ScrollContainer/VBoxContainer/OverviewButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/ControlsButton" to="Menu/ScrollContainer/VBoxContainer/ControlsButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/GnorpButton" to="Menu/ScrollContainer/VBoxContainer/GnorpButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/ToolButton" to="Menu/ScrollContainer/VBoxContainer/ToolButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/DungeonButton" to="Menu/ScrollContainer/VBoxContainer/DungeonButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverworldButton" to="Menu/ScrollContainer/VBoxContainer/OverworldButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/EnemiesButton" to="Menu/ScrollContainer/VBoxContainer/EnemiesButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/Buildings" to="Menu/ScrollContainer/VBoxContainer/Buildings" method="_on_button_up"]
 [connection signal="mouse_entered" from="Icon" to="." method="_on_icon_mouse_entered"]
 [connection signal="mouse_exited" from="Icon" to="." method="_on_icon_mouse_exited"]

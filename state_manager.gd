@@ -18,7 +18,7 @@ func save_player(player):
 
 func load_player():
 	if not FileAccess.file_exists("user://player.save"):
-		print("error loading player - no player file")
+		push_error("error loading player - no player file")
 		return
 	
 	var save_file = FileAccess.open("user://player.save", FileAccess.READ)
@@ -27,11 +27,9 @@ func load_player():
 		var json = JSON.new()
 		var parse_result = json.parse(json_string)
 		if not parse_result == OK:
-			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			push_error("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
 			continue
 		var node_data = json.data
-		print("load successful! player: " + str(node_data))
-
 
 func save_game():
 	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
@@ -41,12 +39,12 @@ func save_game():
 		
 		#maybe don't need this?
 		if node.scene_file_path.is_empty():
-			print("persistent node '%s' is not an instanced scene, skipped" % node.name)
+			push_warning("persistent node '%s' is not an instanced scene, skipped" % node.name)
 			continue
 
 		# Check the node has a save function.
 		if !node.has_method("save"):
-			print("persistent node '%s' is missing a save() function, skipped" % node.name)
+			push_warning("persistent node '%s' is missing a save() function, skipped" % node.name)
 			continue
 			
 		var node_data = node.call("save")
@@ -58,7 +56,7 @@ func save_game():
 	
 func load_game():
 	if not FileAccess.file_exists("user://savegame.save"):
-		print("error loading game - no save file")
+		push_error("error loading game - no save file")
 		return # Error! We don't have a save to load.
 
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
@@ -69,7 +67,6 @@ func load_game():
 		var json = JSON.new()
 		var parse_result = json.parse(json_string)
 		if not parse_result == OK:
-			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			push_error("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
 			continue
 		var node_data = json.data
-		print("load successful! data: " + str(node_data))

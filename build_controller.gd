@@ -18,10 +18,12 @@ func _process(_delta: float) -> void:
 
 
 func _on_icon_mouse_entered() -> void:
-	print("mouse entering ui icon")
 	mouse_in_ui = true
 
 
 func _on_icon_mouse_exited() -> void:
-	print("mouse leaving ui icon")
 	mouse_in_ui = false
+
+
+func change_visible(b):
+	visible = b
