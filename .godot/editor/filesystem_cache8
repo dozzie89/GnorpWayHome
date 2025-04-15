@@ -1,37 +1,52 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743105283
-cooldown_timer.gd::GDScript::-1::1742936150::0::1::::<>Timer<>::
-dungeon.gd::GDScript::-1::1743105264::0::1::::<>Node<>::
-dungeon.tscn::PackedScene::5308606635576936455::1743105264::0::1::::<><>::uid://cbhxgb5ume203::::res://slot.tscn<>res://dungeon.gd<>uid://b2dqu8gfqdwqq::::res://art/environment/TileSet_V1.png<>uid://n1fm5gtiy1ng::::res://dungeon_entrance.tscn<>uid://mjwykhhnsyeu::::res://player.tscn<>uid://dgtvs1yoh0kcy::::res://information.tscn<>uid://cka8e2jp2cljm::::res://state_manager.tscn<>uid://dwykphpjspvv3::::res://art/test sprites/player_icon.png<>uid://c6ha4kar5vwrl::::res://art/character-sprites/gnorp_player_base.png<>uid://dfblxdhb8ktgm::::res://art/character-sprites/gnorp_face.png<>uid://c4cwmv5nwg2yd::::res://art/character-sprites/cant-select.png
-dungeon_entrance.gd::GDScript::-1::1743105264::0::1::::<>Area2D<>::
-dungeon_entrance.tscn::PackedScene::966455389234934600::1742936150::0::1::::<><>::res://dungeon_entrance.gd<>uid://cadn4rgfslitv::::res://art/environment/dungeon_entrance.png
-enemy.gd::GDScript::-1::1743105264::0::1::::<>Area2D<>::
-enemy.tscn::PackedScene::2688106873754842113::1743105264::0::1::::<><>::res://enemy.gd<>uid://dc8315jb2t1q2::::res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png
+::res://::1744690263
+building.gd::GDScript::-1::1744690129::0::1::::Building<>Area2D<>::
+build_controller.gd::GDScript::-1::1744674279::0::1::::<>Control<>::
+build_controller.tscn::PackedScene::3892648608117638077::1744690263::0::1::::<><>::res://build_controller.gd<>uid://cfwjyeeoudyww::::res://art/test sprites/player_controller_background.png<>uid://b1jsirb1b427u::::res://art/character-sprites/slot.png<>res://build_slot.gd<>uid://dwykphpjspvv3::::res://art/test sprites/player_icon.png
+build_slot.gd::GDScript::-1::1744677327::0::1::::<>Panel<>::
+cooldown_timer.gd::GDScript::-1::1744662420::0::1::::<>Timer<>::
+dungeon_entrance.gd::GDScript::-1::1744677091::0::1::::<>Area2D<>::
+dungeon_entrance.tscn::PackedScene::966455389234934600::1744668482::0::1::::<><>::res://dungeon_entrance.gd<>uid://cadn4rgfslitv::::res://art/environment/dungeon_entrance.png
+enemy.gd::GDScript::-1::1744674372::0::1::::<>Area2D<>::
+enemy.tscn::PackedScene::2688106873754842113::1744668482::0::1::::<><>::res://enemy.gd<>uid://dc8315jb2t1q2::::res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png
+house.gd::GDScript::-1::1744677195::0::1::::<>Building<>::
+house.tscn::PackedScene::4781692851380285855::1744149460::0::1::::<><>::res://house.gd<>uid://xbwis38mna5s::::res://art/character-sprites/morpho.png
 icon.gd::GDScript::-1::1742936150::0::1::::<>Node<>::
-information.gd::GDScript::-1::1742936150::0::1::::<>Control<>::
-information.tscn::PackedScene::7620926894701871356::1742936150::0::1::::<><>::res://information.gd<>uid://b4d4px1di2g02::::res://art/test sprites/info_background.png<>uid://h2nfxvqxklro::::res://art/test sprites/info.png
-inventory.gd::GDScript::-1::1743105264::0::1::::<>Label<>::
+information.gd::GDScript::-1::1744674372::0::1::::<>Control<>::
+information.tscn::PackedScene::7620926894701871356::1744690130::0::1::::<><>::res://information.gd<>uid://ddt3e1t43axcv::::res://art/test sprites/gnorp_info_menu.png<>uid://c8630m1irq2gb::::res://art/info-bars/info_bar_overview.png<>uid://dxxfcrsrsx2lp::::res://art/info-bars/info_bar_gnorps.png<>uid://h2nfxvqxklro::::res://art/test sprites/info.png<>res://info_button.gd<>uid://cj1km1qjgxxlc::::res://art/info-bars/info_bar_controls.png<>uid://drmsrtm6em3n2::::res://art/info-bars/info_bar_tools.png<>uid://dgkuywjwg5py4::::res://art/info-bars/info_bar_dungeon.png<>uid://ct0paf15ss55h::::res://art/info-bars/info_bar_overworld.png<>res://info_text.gd<>uid://btk8gcw8oehdt::::res://art/info-bars/info_bar_enemies.png<>uid://dpp8aafjil0xn::::res://art/info-bars/info_bar_buildings.png
+info_button.gd::GDScript::-1::1744677376::0::1::::<>Button<>::
+info_text.gd::GDScript::-1::1744663098::0::1::::<>Label<>::
+inventory.gd::GDScript::-1::1744674496::0::1::::<>Label<>::
 inventory.tscn::PackedScene::1568639321747406250::1743105264::0::1::::<><>::res://inventory.gd
-ore.gd::GDScript::-1::1742936150::0::1::::<>Resources<>::
-ore.tscn::PackedScene::8104344129551335106::1742936150::0::1::::<><>::res://ore.gd<>uid://ccbo644jm85tp::::res://art/environment/stone.png
-overworld.gd::GDScript::-1::1743105264::0::1::::<>Node<>::
-overworld.tscn::PackedScene::8325150658456547290::1743105264::0::1::::<><>::res://overworld.gd<>uid://b2dqu8gfqdwqq::::res://art/environment/TileSet_V1.png<>uid://mjwykhhnsyeu::::res://player.tscn<>uid://bekeyy7u570nd::::res://enemy.tscn<>uid://cbhxgb5ume203::::res://slot.tscn<>uid://n1fm5gtiy1ng::::res://dungeon_entrance.tscn<>uid://bh4pmt8ersk4o::::res://player_controller.tscn<>uid://f3we2dyspcph::::res://tool.tscn<>uid://dgtvs1yoh0kcy::::res://information.tscn<>uid://dqodwi1bovo84::::res://tree.tscn<>uid://dnp2mmq838eri::::res://ore.tscn<>uid://wl4i4cwgflbu::::res://inventory.tscn<>uid://cka8e2jp2cljm::::res://state_manager.tscn
-player.gd::GDScript::-1::1743105264::0::1::::<>Area2D<>::
-player.tscn::PackedScene::862224692720794364::1743105264::0::1::::<><>::res://player.gd<>uid://c6ha4kar5vwrl::::res://art/character-sprites/gnorp_player_base.png<>uid://dfblxdhb8ktgm::::res://art/character-sprites/gnorp_face.png<>uid://f3we2dyspcph::::res://tool.tscn<>res://cooldown_timer.gd<>uid://dlokv7nfadvk3::::res://art/test sprites/arrow.png
-player_controller.gd::GDScript::-1::1742936150::0::1::::<>Control<>::
-player_controller.tscn::PackedScene::2938542777572794864::1743105264::0::1::::<><>::res://player_controller.gd<>uid://cfwjyeeoudyww::::res://art/test sprites/player_controller_background.png<>uid://dwykphpjspvv3::::res://art/test sprites/player_icon.png<>uid://c6ha4kar5vwrl::::res://art/character-sprites/gnorp_player_base.png<>uid://b1jsirb1b427u::::res://art/character-sprites/slot.png<>uid://dfblxdhb8ktgm::::res://art/character-sprites/gnorp_face.png<>res://player_slot.gd
-player_slot.gd::GDScript::-1::1743105264::0::1::::<>Panel<>::
-resources.gd::GDScript::-1::1743105264::0::1::::Resources<>RigidBody2D<>::
-slot.gd::GDScript::-1::1742936150::0::1::::<>Node2D<>::
-slot.tscn::PackedScene::4858888160692127418::1743097871::0::1::::<><>::res://slot.gd<>uid://b1jsirb1b427u::::res://art/character-sprites/slot.png<>uid://f3we2dyspcph::::res://tool.tscn
-state_manager.gd::GDScript::-1::1743105264::0::1::::<>Node<>::
+ore.gd::GDScript::-1::1744662420::0::1::::<>Resources<>::
+ore.tscn::PackedScene::8104344129551335106::1743987675::0::1::::<><>::res://ore.gd<>uid://ccbo644jm85tp::::res://art/environment/stone.png
+overworld.gd::GDScript::-1::1744308233::0::1::::<>Node<>::
+overworld.tscn::PackedScene::8325150658456547290::1744690130::0::1::::<><>::res://overworld.gd<>uid://b2dqu8gfqdwqq::::res://art/environment/TileSet_V1.png<>uid://mjwykhhnsyeu::::res://player.tscn<>uid://n1fm5gtiy1ng::::res://dungeon_entrance.tscn<>uid://o6mjwmqp4arc::::res://ui.tscn<>uid://dqodwi1bovo84::::res://tree.tscn<>uid://byt6x177ardkd::::res://wall_collider.tscn<>uid://dnp2mmq838eri::::res://ore.tscn
+player.gd::GDScript::-1::1744674496::0::1::::<>Area2D<>::
+player.tscn::PackedScene::862224692720794364::1744690129::0::1::::<><>::res://player.gd<>uid://c6ha4kar5vwrl::::res://art/character-sprites/gnorp_player_base.png<>uid://dfblxdhb8ktgm::::res://art/character-sprites/gnorp_face.png<>uid://f3we2dyspcph::::res://tool.tscn<>res://cooldown_timer.gd<>uid://dlokv7nfadvk3::::res://art/test sprites/arrow.png
+player_controller.gd::GDScript::-1::1744674372::0::1::::<>Control<>::
+player_controller.tscn::PackedScene::2938542777572794864::1744690263::0::1::::<><>::res://build_controller.gd<>uid://cfwjyeeoudyww::::res://art/test sprites/player_controller_background.png<>uid://dwykphpjspvv3::::res://art/test sprites/player_icon.png<>uid://c6ha4kar5vwrl::::res://art/character-sprites/gnorp_player_base.png<>uid://b1jsirb1b427u::::res://art/character-sprites/slot.png<>uid://dfblxdhb8ktgm::::res://art/character-sprites/gnorp_face.png<>res://player_slot.gd
+player_slot.gd::GDScript::-1::1744674496::0::1::::<>Panel<>::
+resources.gd::GDScript::-1::1744674496::0::1::::Resources<>RigidBody2D<>::
+slot.gd::GDScript::-1::1744674496::0::1::::<>Node2D<>::
+slot.tscn::PackedScene::4858888160692127418::1744690263::0::1::::<><>::res://slot.gd<>uid://b1jsirb1b427u::::res://art/character-sprites/slot.png<>uid://f3we2dyspcph::::res://tool.tscn
+state_manager.gd::GDScript::-1::1744674496::0::1::::<>Node<>::
 state_manager.tscn::PackedScene::5476742040454836554::1743105264::0::1::::<><>::res://state_manager.gd
-title.gd::GDScript::-1::1742936150::0::1::::<>Node<>::
-title.tscn::PackedScene::321446967579803241::1743097871::0::1::::<><>::uid://b2dqu8gfqdwqq::::res://art/environment/TileSet_V1.png<>res://title.gd
-tool.gd::GDScript::-1::1743105264::0::1::::<>Node2D<>::
-tool.tscn::PackedScene::410091136200281189::1743105264::0::1::::<><>::res://tool.gd<>uid://dvbkq7d11vauk::::res://art/character-sprites/pickaxe.png
-tree.gd::GDScript::-1::1742936150::0::1::::<>Resources<>::
-tree.tscn::PackedScene::8311406736705568095::1742936150::0::1::::<><>::uid://5gwsucw7jeqf::::res://art/environment/tree.png<>res://tree.gd
+stonecutter.gd::GDScript::-1::1744677195::0::1::::<>Building<>::
+stonecutter.tscn::PackedScene::2370007589085131573::1744148798::0::1::::<><>::res://stonecutter.gd<>uid://xbwis38mna5s::::res://art/character-sprites/morpho.png
+time_controller.gd::GDScript::-1::1744676468::0::1::::<>Control<>::
+time_controller.tscn::PackedScene::1601410269458432812::1744690131::0::1::::<><>::res://time_controller.gd
+title.gd::GDScript::-1::1744662420::0::1::::<>Node<>::
+title.tscn::PackedScene::321446967579803241::1744690130::0::1::::<><>::uid://b2dqu8gfqdwqq::::res://art/environment/TileSet_V1.png<>res://title.gd
+tool.gd::GDScript::-1::1744669343::0::1::::<>Node2D<>::
+tool.tscn::PackedScene::410091136200281189::1744671315::0::1::::<><>::res://tool.gd<>uid://dvbkq7d11vauk::::res://art/character-sprites/pickaxe.png
+tree.gd::GDScript::-1::1744662420::0::1::::<>Resources<>::
+tree.tscn::PackedScene::8311406736705568095::1744671315::0::1::::<><>::uid://5gwsucw7jeqf::::res://art/environment/tree.png<>res://tree.gd
+ui.gd::GDScript::-1::1744308262::0::1::::<>Node<>::
+ui.tscn::PackedScene::1047385372166156444::1744690130::0::1::::<><>::res://ui.gd<>uid://cbhxgb5ume203::::res://slot.tscn<>uid://bh4pmt8ersk4o::::res://player_controller.tscn<>uid://dgtvs1yoh0kcy::::res://information.tscn<>uid://wl4i4cwgflbu::::res://inventory.tscn<>uid://bvpvmbb280lmb::::res://build_controller.tscn<>uid://w2y81drrfocy::::res://time_controller.tscn
+wall_collider.tscn::PackedScene::4112100824864037611::1744142417::0::1::::<><>::uid://xbwis38mna5s::::res://art/character-sprites/morpho.png
+woodcutter.gd::GDScript::-1::1744677195::0::1::::<>Building<>::
+woodcutter.tscn::PackedScene::494497830488844581::1744148796::0::1::::<><>::res://woodcutter.gd<>uid://xbwis38mna5s::::res://art/character-sprites/morpho.png
 ::res://addons/::1742923805
 ::res://addons/godot-git-plugin/::1742923805
 git_plugin.gdextension::GDExtension::-1::1742923805::0::1::::<><>::
@@ -40,9 +55,8 @@ THIRDPARTY.md::TextFile::-1::1742923805::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1742923805
 ::res://addons/godot-git-plugin/macos/::1742923805
 ::res://addons/godot-git-plugin/win64/::1742923806
-::res://art/::1742936150
-::res://art/character-sprites/::1742936234
-cant-select.png::CompressedTexture2D::6813804941719795023::1742936150::1742936234::1::::<><>::
+::res://art/::1744668429
+::res://art/character-sprites/::1744690263
 face_1.png::CompressedTexture2D::440017778452519963::1742936150::1742936234::1::::<><>::
 face_2.png::CompressedTexture2D::7399487034646618528::1742936150::1742936234::1::::<><>::
 gnorp_face.png::CompressedTexture2D::7512979775677399652::1742936150::1742936234::1::::<><>::
@@ -50,7 +64,7 @@ gnorp_player_base.png::CompressedTexture2D::6963198478513711565::1742936150::174
 morpho.png::CompressedTexture2D::1617758831811649238::1742936150::1742936234::1::::<><>::
 pickaxe.png::CompressedTexture2D::8635929574460695674::1742936150::1742936234::1::::<><>::
 player_base.png::CompressedTexture2D::1303523717727946870::1742936150::1742936234::1::::<><>::
-slot.png::CompressedTexture2D::4231018105915102904::1742936150::1742936234::1::::<><>::
+slot.png::CompressedTexture2D::4231018105915102904::1742936150::1744690264::1::::<><>::
 sword.png::CompressedTexture2D::8737800337030077109::1742936150::1742936234::1::::<><>::
 ::res://art/environment/::1742936234
 dungeon_entrance.png::CompressedTexture2D::4779876511995039827::1742936150::1742936234::1::::<><>::
@@ -59,8 +73,8 @@ ship.png::CompressedTexture2D::5858046473262417943::1742936150::1742936234::1:::
 stone.png::CompressedTexture2D::4916190398328878389::1742936150::1742936234::1::::<><>::
 TileSet_V1.png::CompressedTexture2D::4288721525732599744::1742936150::1742936234::1::::<><>::
 tree.png::CompressedTexture2D::2119420548395793213::1742936150::1742936234::1::::<><>::
-::res://art/godot-png-sprites/::1742923806
-::res://art/godot-png-sprites/sprite1/::1742923806
+::res://art/godot-png-sprites/::1744671717
+::res://art/godot-png-sprites/sprite1/::1744671717
 ::res://art/godot-png-sprites/sprite1/Attack/::1742925275
 Slime2_Attack_body.png::CompressedTexture2D::7785868280434858282::1742923806::1742925275::1::::<><>::
 Slime2_Attack_full.png::CompressedTexture2D::736499721765020711::1742923806::1742925275::1::::<><>::
@@ -85,7 +99,7 @@ Slime2_Run_shadow.png::CompressedTexture2D::7415983680814290463::1742923806::174
 Slime2_Walk_body.png::CompressedTexture2D::5873047294455313233::1742923806::1742925275::1::::<><>::
 Slime2_Walk_full.png::CompressedTexture2D::1994021439669434157::1742923806::1742925275::1::::<><>::
 Slime2_Walk_shadow.png::CompressedTexture2D::4387096543170970989::1742923806::1742925275::1::::<><>::
-::res://art/godot-png-sprites/sprite2/::1742923806
+::res://art/godot-png-sprites/sprite2/::1744671771
 ::res://art/godot-png-sprites/sprite2/Attack/::1742925275
 Slime1_Attack_body.png::CompressedTexture2D::1404152199265857654::1742923806::1742925275::1::::<><>::
 Slime1_Attack_full.png::CompressedTexture2D::4250335587724496572::1742923806::1742925275::1::::<><>::
@@ -135,10 +149,20 @@ Slime3_Run_shadow.png::CompressedTexture2D::4045597319815717713::1742923806::174
 Slime3_Walk_body.png::CompressedTexture2D::4525504198592741351::1742923806::1742925275::1::::<><>::
 Slime3_Walk_full.png::CompressedTexture2D::2921595320596100449::1742923806::1742925275::1::::<><>::
 Slime3_Walk_shadow.png::CompressedTexture2D::4564572816733174813::1742923806::1742925275::1::::<><>::
-::res://art/test sprites/::1742936234
+::res://art/info-bars/::1744690237
+info_bar_buildings.png::CompressedTexture2D::8245064040866072503::1744671979::1744690237::1::::<><>::
+info_bar_controls.png::CompressedTexture2D::5458844771930413324::1744672875::1744690237::1::::<><>::
+info_bar_dungeon.png::CompressedTexture2D::7602297259782879577::1744662000::1744690237::1::::<><>::
+info_bar_enemies.png::CompressedTexture2D::3742667006431677365::1744671873::1744690237::1::::<><>::
+info_bar_gnorps.png::CompressedTexture2D::8821394221149888745::1744661572::1744690237::1::::<><>::
+info_bar_overview.png::CompressedTexture2D::7154814309294185161::1744662968::1744690237::1::::<><>::
+info_bar_overworld.png::CompressedTexture2D::6158949899421334251::1744662151::1744690237::1::::<><>::
+info_bar_tools.png::CompressedTexture2D::8378369208236404293::1744661943::1744690237::1::::<><>::
+::res://art/test sprites/::1744690237
 arrow.png::CompressedTexture2D::7960886992311145404::1742936150::1742936234::1::::<><>::
+cant-select.png::CompressedTexture2D::6813804941719795023::1742936150::1744690237::1::::<><>::
 dungeon_entrance.png::CompressedTexture2D::3099507430675222762::1742936150::1742936234::1::::<><>::
+gnorp_info_menu.png::CompressedTexture2D::7410760374607075669::1744660956::1744690237::1::::<><>::
 info.png::CompressedTexture2D::547859595937384060::1742936150::1742936234::1::::<><>::
-info_background.png::CompressedTexture2D::4429879110507054525::1742936150::1742936234::1::::<><>::
 player_controller_background.png::CompressedTexture2D::5169791425089882106::1742936150::1742936234::1::::<><>::
 player_icon.png::CompressedTexture2D::8753596025318793010::1742936150::1742936234::1::::<><>::
