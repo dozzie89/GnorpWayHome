@@ -19,3 +19,22 @@ texture = ExtResource("2_kovaj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Resources"]]
 position = Vector2(0, -16.5)
 shape = SubResource("CapsuleShape2D_jl865")
+
+[node name="HitParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -33)
+emitting = false
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.23
+randomness = 0.26
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 19.96
+direction = Vector2(0, 0)
+spread = 97.67
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+color = Color(0.297706, 0.297706, 0.297706, 1)

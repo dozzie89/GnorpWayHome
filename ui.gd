@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 		self.position = player.position
 		
 		var timer = player.get_timer()
-		$Slot.scale.y = (timer.wait_time - timer.time_left) / 2 * timer.wait_time
+		$Slot/CooldownBox.scale.x = (timer.wait_time - timer.time_left) / timer.wait_time
 
 func update_player(tplay):
 	player = tplay

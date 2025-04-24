@@ -11,12 +11,20 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_773rx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_shf36")
 
+[node name="CooldownBox" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.333333)
+layout_mode = 0
+offset_right = 328.0
+offset_bottom = 321.0
+texture = ExtResource("1_shf36")
+
 [node name="Tool" parent="." instance=ExtResource("2_p3s68")]
-position = Vector2(-36, -48)
+position = Vector2(166, 162)
 scale = Vector2(8, 8)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

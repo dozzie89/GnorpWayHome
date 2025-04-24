@@ -92,6 +92,8 @@ func _process(delta):
 	#weapon use
 	if Input.is_action_pressed("use_tool") and can_use:
 		
+		$Tool.swing_animation()
+		
 		var target = Vector2(get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2)
 		var vec = target - position
 		vec = hit_distance * vec / vec.length()
@@ -100,6 +102,7 @@ func _process(delta):
 		#animation
 		can_use = false
 		$CooldownTimer.start()
+		$Hitbox.force_raycast_update()
 		if $Hitbox.is_colliding():
 			var object = $Hitbox.get_collider()
 			if object.is_in_group("Enemies"):

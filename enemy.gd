@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
+
 func take_damage(in_damage):
 	health = health - in_damage
 	$ProgressBar.value = health

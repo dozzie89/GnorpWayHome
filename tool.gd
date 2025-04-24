@@ -15,6 +15,10 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	pass
+	
+func swing_animation():
+	look_at(Vector2(get_viewport().get_mouse_position() + get_viewport().get_camera_2d().position - get_viewport_rect().size/2))
+	$AnimationPlayer.play("swing")
 
 func interact(player) -> void:
 	if not equippable:
@@ -36,6 +40,9 @@ func interact(player) -> void:
 	
 func get_texture():
 	return $TextureRect.texture
+	
+func get_damage():
+	return damage
 	
 func set_tool(ttexture, tdamage):
 	$TextureRect.texture = ttexture

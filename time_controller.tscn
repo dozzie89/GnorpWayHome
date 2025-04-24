@@ -7,11 +7,18 @@ font_size = 72
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
-[node name="TimeController" type="Control"]
+[node name="TimeController" type="Control" groups=["Daily"]]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_cnj8v")
-cnst = 0.008
+cnst = 20.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -741.0
+offset_right = 1949.0
+offset_bottom = 388.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

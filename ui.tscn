@@ -21,6 +21,7 @@ offset_left = -942.0
 offset_top = 157.0
 offset_right = -942.0
 offset_bottom = 157.0
+start_hr = 12
 
 [node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
 offset_left = -937.0
@@ -32,7 +33,10 @@ testing testing"
 label_settings = SubResource("LabelSettings_x8qt6")
 
 [node name="Slot" parent="." instance=ExtResource("1_lp3xt")]
-position = Vector2(-777, 361)
+offset_left = -777.0
+offset_top = 361.0
+offset_right = -777.0
+offset_bottom = 361.0
 
 [node name="PlayerController" parent="." instance=ExtResource("2_nscvk")]
 offset_left = -799.0

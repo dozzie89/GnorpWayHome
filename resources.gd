@@ -10,14 +10,17 @@ func _ready() -> void:
 	pass
 	
 func _process(_delta: float) -> void:
-	pass
+	if $Sprite2D.visible == false and $HitParticles.emitting == false:
+		queue_free()
 
 func take_damage(amount): # Getting chopped down
 	health -= amount
 	
+	$HitParticles.emitting = true
+	
 	if health <= 0:
 		drop_resources()
-		queue_free()
+		$Sprite2D.visible = false
 
 func drop_resources():
 	for resource_name in drops:

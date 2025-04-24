@@ -57,9 +57,13 @@ func generate():
 		tool.texture = "res://art/character-sprites/sword.png"
 		tool.damage = rng.randi_range(2,8)
 		
-	get_tree().root.get_child(0).add_child(enemy1)
-	get_tree().root.get_child(0).add_child(enemy2)
-	get_tree().root.get_child(0).add_child(tool)
+	get_tree().root.get_child(0).get_node("DungeonCollect").add_child(enemy1)
+	get_tree().root.get_child(0).get_node("DungeonCollect").add_child(enemy2)
+	get_tree().root.get_child(0).get_node("DungeonCollect").add_child(tool)
+		
+	#get_tree().root.get_child(0).add_child(enemy1)
+	#get_tree().root.get_child(0).add_child(enemy2)
+	#get_tree().root.get_child(0).add_child(tool)
 	
 	spawns.append(enemy1)
 	spawns.append(enemy2)
@@ -67,7 +71,9 @@ func generate():
 	
 func clear():
 	for spawn in spawns:
-		spawn.queue_free()
+		if is_instance_valid(spawn):
+			spawn.queue_free()
+	spawns = []
 
 func reset():
 	usable = true

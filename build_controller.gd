@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if mouse_in_ui and Input.is_action_just_released("use_tool") and ($Menu.visible or !get_tree().root.get_child(0).get_paused()):
+	if ($Menu.visible and Input.is_action_just_released("exit")) or (mouse_in_ui and Input.is_action_just_released("use_tool") and ($Menu.visible or !get_tree().root.get_child(0).get_paused())):
 		#bring up menu, "pause game?"
 		$Menu.visible = !$Menu.visible
 		get_tree().call_group("Players", "_pause")

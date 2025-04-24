@@ -10,6 +10,8 @@ var current_day
 
 var last_update
 
+var opacity
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,16 +20,21 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if not get_tree().root.get_child(0).get_paused():
-		if current_time + cnst <= time_in_day:
-			current_time += cnst
+		if current_time + delta * cnst <= time_in_day:
+			current_time += delta * cnst
 		else:
 			current_time = 0
 			current_day += 1
 			get_tree().call_group("Daily", "reset")
 	$Label.text = "Day: " + str(current_day) + "
 					Time: " + int_to_time(int(current_time))
+	opacity = time_to_opacity(current_time)
+	$ColorRect.color = Color(0, 0, 0, opacity)
+	
+func time_to_opacity(time):
+	return 0.4 * abs(time - 720)/720
 	
 func int_to_time(num):
 	var ret_str = ''

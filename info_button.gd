@@ -14,7 +14,7 @@ func _ready() -> void:
 			inf_text = "Overview:
 				
 						Thanks for playing Gnorp Way Home!
-						In this game, you and your Gnorp friends crashlanded on an alien planet and must find a way to survive.
+						In this game, you and your Gnorp friends crashlanded on an alien planet and must find a way to survive. Your goal is to survive as many days as possible without losing all of your Gnorps!
 						
 						Feel free to look through the following pages of information if you need any help during the game - don't feel like you need to read it all at once!"
 		2:
@@ -23,7 +23,8 @@ func _ready() -> void:
 						WASD: movement
 						Shift: sprint
 						E: interact
-						Left Click: use tool, interact w/ menus"
+						Left Click: use tool, interact w/ menus
+						ESC: Pause, leave menus"
 		3:
 			inf_text = "Gnorps:
 				

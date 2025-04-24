@@ -11,7 +11,7 @@ height = 80.0
 gravity_scale = 0.0
 script = ExtResource("1_8w156")
 
-[node name="Tree" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.999996, -116.159)
 scale = Vector2(2.86364, 2.86364)
 texture = ExtResource("1_4y4c5")
@@ -19,3 +19,21 @@ texture = ExtResource("1_4y4c5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Resources"]]
 position = Vector2(1.14441e-05, -40.5)
 shape = SubResource("CapsuleShape2D_iune5")
+
+[node name="HitParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -33)
+emitting = false
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.23
+randomness = 0.26
+emission_shape = 1
+emission_sphere_radius = 19.96
+direction = Vector2(0, 0)
+spread = 97.67
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+color = Color(0.352479, 0.210419, 0, 1)

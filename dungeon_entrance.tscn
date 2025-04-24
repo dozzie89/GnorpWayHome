@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isjub"]
 size = Vector2(249, 258)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["Daily"]]
 collision_mask = 0
 script = ExtResource("1_r3my4")
 
