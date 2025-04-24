@@ -16,7 +16,7 @@ var opacity
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current_time = start_hr * 60
-	current_day = 0
+	current_day = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +27,10 @@ func _process(delta: float) -> void:
 		else:
 			current_time = 0
 			current_day += 1
+			get_tree().call_group("DungEnt", "check_lose")
+
 			get_tree().call_group("Daily", "reset")
+			
 	$Label.text = "Day: " + str(current_day) + "
 					Time: " + int_to_time(int(current_time))
 	opacity = time_to_opacity(current_time)

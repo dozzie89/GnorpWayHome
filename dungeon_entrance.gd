@@ -38,8 +38,11 @@ func interact(player) -> void:
 	
 		generate()
 		get_tree().call_group("OverworldOnly", "change_visible", false)
+		
+		player.in_dungeon = true
 	else:
 		get_tree().call_group("OverworldOnly", "change_visible", true)
+		player.in_dungeon = false
 
 func generate():
 	clear()
@@ -78,3 +81,7 @@ func clear():
 func reset():
 	usable = true
 	modulate = Color(1, 1, 1)
+	
+func check_lose():
+	if usable:
+		get_tree().call_group("Overworld", "lose")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqu1armsrlias"]
+[gd_scene load_steps=10 format=3 uid="uid://dqu1armsrlias"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_jifnx"]
 [ext_resource type="Texture2D" uid="uid://b2dqu8gfqdwqq" path="res://art/environment/TileSet_V1.png" id="2_dl68e"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://n1fm5gtiy1ng" path="res://dungeon_entrance.tscn" id="5_hvs4g"]
 [ext_resource type="PackedScene" uid="uid://o6mjwmqp4arc" path="res://ui.tscn" id="5_r8yb5"]
 [ext_resource type="PackedScene" uid="uid://dqodwi1bovo84" path="res://tree.tscn" id="9_y1xm3"]
-[ext_resource type="PackedScene" uid="uid://byt6x177ardkd" path="res://wall_collider.tscn" id="10_6y5xo"]
 [ext_resource type="PackedScene" uid="uid://dnp2mmq838eri" path="res://ore.tscn" id="10_ra8mo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1567"]
@@ -423,7 +422,7 @@ layer_0/tile_data = PackedInt32Array(0, 983041, 10, 65536, 983041, 10, 1, 983041
 
 [node name="Buildings" type="CanvasGroup" parent="."]
 
-[node name="DungeonEntrance" parent="." node_paths=PackedStringArray("teleport_location") instance=ExtResource("5_hvs4g")]
+[node name="DungeonEntrance" parent="." node_paths=PackedStringArray("teleport_location") groups=["DungEnt"] instance=ExtResource("5_hvs4g")]
 process_mode = 3
 position = Vector2(868, 339)
 teleport_location = NodePath("../DungeonExit")
@@ -438,20 +437,20 @@ position = Vector2(364, -3754)
 teleport_location = NodePath("../DungeonEntrance")
 
 [node name="Player" parent="." instance=ExtResource("2_ls27n")]
-position = Vector2(919, 656)
+position = Vector2(871, 653)
 gnorp_name = "Gnorp"
 id = 1
 active_player = true
 color = Color(0.380392, 0.682353, 0.407843, 1)
 
 [node name="Player2" parent="." instance=ExtResource("2_ls27n")]
-position = Vector2(466, 297)
+position = Vector2(462, 284)
 gnorp_name = "Gnarp"
 id = 2
 color = Color(0.46384, 0.635312, 1, 1)
 
 [node name="Player3" parent="." instance=ExtResource("2_ls27n")]
-position = Vector2(1392, 306)
+position = Vector2(1228, 297)
 gnorp_name = "Glarbo"
 id = 3
 color = Color(0.633185, 0.443932, 0.499398, 1)
@@ -465,8 +464,3 @@ position = Vector2(1373, 774)
 [node name="UI" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_r8yb5")]
 position = Vector2(919, 656)
 player = NodePath("../Player")
-
-[node name="WallCollider" parent="." instance=ExtResource("10_6y5xo")]
-visible = false
-position = Vector2(697, -16)
-scale = Vector2(43.52, 1)

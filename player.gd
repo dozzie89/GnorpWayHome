@@ -26,6 +26,14 @@ var screen_size
 
 signal hit
 
+var in_dungeon = false
+
+var overworld_clamp_tl = Vector2(-900, -400) 
+var overworld_clamp_br = Vector2(2400, 1600)
+
+var dungeon_clamp_tl = Vector2(70,-4400)
+var dungeon_clamp_br = Vector2(2950,-3050)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	health = max_health
@@ -86,7 +94,12 @@ func _process(delta):
 		$FaceSprite.animation = "idle"
 		
 	position += velocity * delta
-	#position = position.clamp(Vector2.ZERO, screen_size)
+	
+	
+	if in_dungeon:
+		position = position.clamp(dungeon_clamp_tl, dungeon_clamp_br)
+	else:
+		position = position.clamp(overworld_clamp_tl, overworld_clamp_br)
 	
 	
 	#weapon use

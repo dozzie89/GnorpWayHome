@@ -43,6 +43,7 @@ Slot=""
 InfoText=""
 OverworldOnly=""
 Daily=""
+DungEnt=""
 
 [input]
 

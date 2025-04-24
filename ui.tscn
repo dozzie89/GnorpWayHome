@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://o6mjwmqp4arc"]
+[gd_scene load_steps=10 format=3 uid="uid://o6mjwmqp4arc"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_gj5xd"]
 [ext_resource type="PackedScene" uid="uid://cbhxgb5ume203" path="res://slot.tscn" id="1_lp3xt"]
@@ -13,6 +13,11 @@ font_size = 48
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_rb7ay"]
+font_size = 64
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="UI" type="Camera2D" groups=["Camera"]]
 script = ExtResource("1_gj5xd")
 
@@ -21,7 +26,6 @@ offset_left = -942.0
 offset_top = 157.0
 offset_right = -942.0
 offset_bottom = 157.0
-start_hr = 12
 
 [node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
 offset_left = -937.0
@@ -55,3 +59,13 @@ offset_left = -830.0
 offset_top = -545.0
 offset_right = -830.0
 offset_bottom = -545.0
+
+[node name="LoseText" type="Label" parent="."]
+visible = false
+offset_left = -838.0
+offset_top = -107.0
+offset_right = 913.0
+offset_bottom = 163.0
+text = "You didn't clear the dungeon and monsters stormed out!
+The game will now restart."
+label_settings = SubResource("LabelSettings_rb7ay")

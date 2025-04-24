@@ -23,3 +23,15 @@ func get_paused():
 	
 func set_paused(p):
 	paused = p
+
+func lose():
+	$UI/LoseText.visible = true
+	
+	paused = true
+	
+	var tween = get_tree().create_tween()
+	tween.tween_interval(5)
+	tween.tween_callback(restart)
+	
+func restart():
+	get_tree().reload_current_scene()

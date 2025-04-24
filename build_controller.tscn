@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvpvmbb280lmb"]
+[gd_scene load_steps=10 format=3 uid="uid://bvpvmbb280lmb"]
 
 [ext_resource type="Script" path="res://build_controller.gd" id="1_or57d"]
 [ext_resource type="Texture2D" uid="uid://cfwjyeeoudyww" path="res://art/test sprites/player_controller_background.png" id="2_2ogyc"]
 [ext_resource type="Texture2D" uid="uid://b1jsirb1b427u" path="res://art/character-sprites/slot.png" id="3_jjt4y"]
 [ext_resource type="Script" path="res://build_slot.gd" id="4_hjg5x"]
 [ext_resource type="Texture2D" uid="uid://dwykphpjspvv3" path="res://art/test sprites/player_icon.png" id="5_x848y"]
+[ext_resource type="Texture2D" uid="uid://xbwis38mna5s" path="res://art/character-sprites/morpho.png" id="6_pcl56"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2yl4"]
 texture = ExtResource("3_jjt4y")
@@ -189,6 +190,14 @@ offset_right = 1759.0
 offset_bottom = 1060.0
 texture = ExtResource("5_x848y")
 expand_mode = 1
+
+[node name="Building" type="TextureRect" parent="Icon"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 40.0
+offset_right = 111.0
+offset_bottom = 117.0
+texture = ExtResource("6_pcl56")
 
 [node name="Button" type="Button" parent="."]
 visible = false
