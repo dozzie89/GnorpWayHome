@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqodwi1bovo84"]
+[gd_scene load_steps=5 format=3 uid="uid://dqodwi1bovo84"]
 
 [ext_resource type="Texture2D" uid="uid://5gwsucw7jeqf" path="res://art/environment/tree.png" id="1_4y4c5"]
 [ext_resource type="Script" path="res://tree.gd" id="1_8w156"]
+[ext_resource type="AudioStream" uid="uid://b8ahsemdeaov3" path="res://sounds/tree_hit.mp3" id="3_48uhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iune5"]
 radius = 26.0
@@ -37,3 +38,6 @@ initial_velocity_max = 50.0
 scale_amount_min = 5.0
 scale_amount_max = 10.0
 color = Color(0.352479, 0.210419, 0, 1)
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_48uhu")

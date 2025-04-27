@@ -2,9 +2,16 @@ extends Node
 
 @export var paused = false
 
+var rng
+
+var left_bound = -700
+var up_bound = -200
+var right_bound = 2200
+var down_bound = 1600
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	rng = RandomNumberGenerator.new()
 
 func get_player(id):
 	if id == 1:
@@ -31,7 +38,28 @@ func lose():
 	
 	var tween = get_tree().create_tween()
 	tween.tween_interval(5)
-	tween.tween_callback(restart)
+	tween.tween_callback(restart_game)
 	
-func restart():
+func restart_game():
 	get_tree().reload_current_scene()
+
+#generate resources on daily reset
+func reset():
+	print("GENERATING...")
+	for i in range(rng.randi_range(1, 5)):
+		print("STARTING GENERATION ", i)
+		var x = rng.randi_range(left_bound, right_bound)
+		var y = rng.randi_range(up_bound, down_bound)
+		
+		var new_resource = null
+		
+		if rng.randi_range(0, 1):
+			new_resource = preload("res://tree.tscn").instantiate()
+		else:
+			new_resource = preload("res://ore.tscn").instantiate()
+			
+		new_resource.position = Vector2(x, y)
+		
+		print("resource ", new_resource, "added at ", new_resource.position)
+			
+		$ResourceCollect.add_child(new_resource)

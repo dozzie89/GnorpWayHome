@@ -13,5 +13,6 @@ func interact(player):
 		return
 	if player.health < player.max_health:
 		player.health += 1
+		player.get_node("ProgressBar").value = player.health
 		usable = false
 		modulate = Color(1, 0, 0)

@@ -57,6 +57,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if $BodySprite.visible == false and $DeadParticles.emitting == false:
+		queue_free()
+		
 	if get_tree().root.get_child(0).get_paused() or not active_player:
 		return
 		
@@ -151,14 +154,12 @@ func _on_area_exited(area: Area2D) -> void:
 
 
 func _on_hit(damage) -> void:
+	#$Audio.stream = preload("res://sounds/gnorp_hit.mp3")
+	$Audio.play()
 	health -= damage
 	$ProgressBar.value = health
 	if health <= 0:
 		kill()
-	
-func _pause() -> void:
-	var ow = get_tree().root.get_child(0)
-	ow.set_paused(!ow.get_paused())
 
 func get_tool():
 	return $Tool
@@ -205,4 +206,9 @@ func get_timer():
 
 func kill():
 	get_tree().call_group("Controller", 'player_removed', id)
-	queue_free()
+	$DeadParticles.emitting = true
+	$BodySprite.visible = false
+	$FaceSprite.visible = false
+	$Tool.visible = false
+	$ActiveIndicator.visible = false
+	$ProgressBar.visible = false

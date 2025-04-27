@@ -16,15 +16,24 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if $BodySprite.visible == false and $Audio.playing == false:
+		queue_free()
 
 
 
 func take_damage(in_damage):
 	health = health - in_damage
 	$ProgressBar.value = health
+	
+	$Audio.play()
 		
 	if health <= 0:
 		#do stuff!
 		get_tree().call_group("Inventory", "add_resources", "Goopa", 2)
-		queue_free()
+		$BodySprite.visible = false
+		$CollisionShape2D.disabled = true
+		$ProgressBar.visible = false
+
+
+func interact(_player):
+	pass

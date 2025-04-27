@@ -10,13 +10,14 @@ func _ready() -> void:
 	pass
 	
 func _process(_delta: float) -> void:
-	if $Sprite2D.visible == false and $HitParticles.emitting == false:
+	if $Sprite2D.visible == false and $HitParticles.emitting == false and $Audio.playing == false:
 		queue_free()
 
 func take_damage(amount): # Getting chopped down
 	health -= amount
 	
 	$HitParticles.emitting = true
+	$Audio.play()
 	
 	if health <= 0:
 		drop_resources()

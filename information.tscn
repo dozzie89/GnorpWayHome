@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgtvs1yoh0kcy"]
+[gd_scene load_steps=17 format=3 uid="uid://dgtvs1yoh0kcy"]
 
 [ext_resource type="Script" path="res://information.gd" id="1_bvxri"]
 [ext_resource type="Texture2D" uid="uid://ddt3e1t43axcv" path="res://art/test sprites/gnorp_info_menu.png" id="2_qh3sm"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://info_text.gd" id="8_vqi0h"]
 [ext_resource type="Texture2D" uid="uid://btk8gcw8oehdt" path="res://art/info-bars/info_bar_enemies.png" id="9_dqcx7"]
 [ext_resource type="Texture2D" uid="uid://dpp8aafjil0xn" path="res://art/info-bars/info_bar_buildings.png" id="10_isbl5"]
+[ext_resource type="Texture2D" uid="uid://dbohfugb1iooh" path="res://art/info-bars/info_bar_credits.png" id="12_ssv4h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8e3f5"]
 font_size = 32
@@ -105,6 +106,13 @@ flat = true
 script = ExtResource("4_e74s1")
 id = 8
 
+[node name="Credits" type="Button" parent="Menu/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("12_ssv4h")
+flat = true
+script = ExtResource("4_e74s1")
+id = 9
+
 [node name="Label" type="Label" parent="Menu" groups=["InfoText"]]
 layout_mode = 0
 offset_left = 803.0
@@ -144,5 +152,6 @@ label_settings = SubResource("LabelSettings_eve4b")
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverworldButton" to="Menu/ScrollContainer/VBoxContainer/OverworldButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/EnemiesButton" to="Menu/ScrollContainer/VBoxContainer/EnemiesButton" method="_on_button_up"]
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/Buildings" to="Menu/ScrollContainer/VBoxContainer/Buildings" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/Credits" to="Menu/ScrollContainer/VBoxContainer/Credits" method="_on_button_up"]
 [connection signal="mouse_entered" from="Icon" to="." method="_on_icon_mouse_entered"]
 [connection signal="mouse_exited" from="Icon" to="." method="_on_icon_mouse_exited"]

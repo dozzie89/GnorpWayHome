@@ -35,6 +35,8 @@ func interact(player) -> void:
 	set_tool(temp_texture, temp_damage)
 	
 	equippable = true
+	
+	$Audio.play()
 
 	get_tree().call_group("Slot", "update_slot", player.get_tool())
 	

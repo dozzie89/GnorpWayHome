@@ -52,7 +52,7 @@ func _ready() -> void:
 			inf_text = "Overworld:
 				
 						The overworld is where your Gnorps will spend most of their time. 
-						Certain resources will only spawn in the overworld, and certain actions are only available in the overworld (like building)."
+						Certain resources will only spawn in the overworld, and resources will spawn daily."
 		7:
 			inf_text = "Enemies:
 				
@@ -66,8 +66,16 @@ func _ready() -> void:
 						To access the building menu, click the button in the bottom right.\n
 						Buildings cost resources to make (not implemented yet), and each building can only be placed once.\n
 						Each building has different effects and can only be activated once per day - explore to find out what they do!"
+		9:
+			inf_text = "Credits:
+				
+						Game programmed by Dylan Osborn and Annie Huang.
+						
+						All sprites drawn by Annie Huang.
+						
+						Gnorp hit sound, enemy hit sound, ore hit sound, tree hit sound, and tool swap sound all from ZapSplat"
 		_:
-			inf_text = "uh oh"
+			inf_text = "uh oh - something went wrong. we're sorry! please try again"
 			push_error("INVALID BUTTON ID")
 
 

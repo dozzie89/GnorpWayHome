@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bekeyy7u570nd"]
+[gd_scene load_steps=13 format=3 uid="uid://bekeyy7u570nd"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_62gmw"]
 [ext_resource type="Texture2D" uid="uid://dc8315jb2t1q2" path="res://art/godot-png-sprites/sprite2/Idle/Slime1_Idle_full.png" id="1_fl4tq"]
+[ext_resource type="AudioStream" uid="uid://dej4wqf8ole0i" path="res://sounds/slime_hit.mp3" id="3_1dfx5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_or673"]
 atlas = ExtResource("1_fl4tq")
@@ -80,3 +81,6 @@ offset_right = 43.0
 offset_bottom = -47.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_sohrd")
 show_percentage = false
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1dfx5")

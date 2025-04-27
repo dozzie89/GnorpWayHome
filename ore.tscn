@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnp2mmq838eri"]
+[gd_scene load_steps=5 format=3 uid="uid://dnp2mmq838eri"]
 
 [ext_resource type="Script" path="res://ore.gd" id="1_eqxuu"]
 [ext_resource type="Texture2D" uid="uid://ccbo644jm85tp" path="res://art/environment/stone.png" id="2_kovaj"]
+[ext_resource type="AudioStream" uid="uid://dr5euhjdeejo4" path="res://sounds/rock_hit.mp3" id="3_6j3wj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jl865"]
 radius = 16.0
@@ -38,3 +39,6 @@ initial_velocity_max = 50.0
 scale_amount_min = 10.0
 scale_amount_max = 15.0
 color = Color(0.297706, 0.297706, 0.297706, 1)
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6j3wj")
