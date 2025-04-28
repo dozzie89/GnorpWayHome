@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://caej1u0g6g152"]
 
 [ext_resource type="Script" path="res://house.gd" id="1_g1vbd"]
-[ext_resource type="Texture2D" uid="uid://xbwis38mna5s" path="res://art/character-sprites/morpho.png" id="2_y4nol"]
+[ext_resource type="Texture2D" uid="uid://ujq2i0ep3ppr" path="res://art/environment/home.png" id="2_qoyhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cp7hq"]
-size = Vector2(33, 32)
+size = Vector2(25, 25)
 
-[node name="House" type="Area2D"]
+[node name="House" type="Area2D" groups=["Daily"]]
+scale = Vector2(3, 3)
 script = ExtResource("1_g1vbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_cp7hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_y4nol")
+texture = ExtResource("2_qoyhr")

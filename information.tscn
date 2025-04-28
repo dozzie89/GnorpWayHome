@@ -19,7 +19,7 @@
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_eve4b"]
-font_size = 128
+font_size = 200
 outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
@@ -137,11 +137,11 @@ expand_mode = 1
 
 [node name="Start" type="Label" parent="."]
 layout_mode = 0
-offset_left = 856.0
-offset_top = 10.0
-offset_right = 1739.0
-offset_bottom = 185.0
-text = "START HERE ->"
+offset_left = 576.0
+offset_top = 134.0
+offset_right = 1885.0
+offset_bottom = 407.0
+text = "START HERE ^"
 label_settings = SubResource("LabelSettings_eve4b")
 
 [connection signal="button_up" from="Menu/ScrollContainer/VBoxContainer/OverviewButton" to="Menu/ScrollContainer/VBoxContainer/OverviewButton" method="_on_button_up"]

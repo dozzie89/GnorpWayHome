@@ -13,7 +13,7 @@ config_version=5
 config/name="Gnorpotype"
 run/main_scene="res://title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/image="res://art/character-sprites/morpho.png"
+boot_splash/image="res://art/logo.png"
 
 [display]
 
@@ -44,6 +44,7 @@ InfoText=""
 OverworldOnly=""
 Daily=""
 DungEnt=""
+Ship=""
 
 [input]
 

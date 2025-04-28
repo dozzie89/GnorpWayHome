@@ -26,6 +26,7 @@ offset_left = -942.0
 offset_top = 157.0
 offset_right = -942.0
 offset_bottom = 157.0
+cnst = 40.0
 
 [node name="Inventory" parent="." instance=ExtResource("4_6rj4e")]
 offset_left = -937.0
@@ -66,6 +67,6 @@ offset_left = -838.0
 offset_top = -107.0
 offset_right = 913.0
 offset_bottom = 163.0
-text = "You didn't clear the dungeon and monsters stormed out!
-The game will now restart."
+text = "You lose!
+You didn't clear the dungeon today and monsters stormed out!"
 label_settings = SubResource("LabelSettings_rb7ay")

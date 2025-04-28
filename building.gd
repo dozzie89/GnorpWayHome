@@ -19,3 +19,4 @@ func _process(_delta: float) -> void:
 
 func reset():
 	usable = true
+	modulate = Color(1, 1, 1)

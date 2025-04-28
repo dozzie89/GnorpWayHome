@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwyh60x4pdcro"]
+
+[ext_resource type="Script" path="res://win_screen.gd" id="1_lhsri"]
+[ext_resource type="Texture2D" uid="uid://boa8u2p4602h0" path="res://art/stars.png" id="2_nfsax"]
+[ext_resource type="Texture2D" uid="uid://bhpqbtvfuq032" path="res://art/ship.png" id="3_b5fay"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vonnw"]
+font_size = 100
+
+[node name="WinScreen" type="Node"]
+script = ExtResource("1_lhsri")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -21.0
+offset_top = -39.0
+offset_right = 1948.0
+offset_bottom = 1140.0
+texture = ExtResource("2_nfsax")
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 525.0
+offset_top = 638.0
+offset_right = 688.0
+offset_bottom = 674.0
+scale = Vector2(5, 5)
+text = "RESTART GAME
+"
+icon = ExtResource("3_b5fay")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = -0.00729167
+offset_left = 613.0
+offset_top = 830.0
+offset_right = 756.0
+offset_bottom = 866.0
+scale = Vector2(5, 5)
+text = "EXIT GAME"
+icon = ExtResource("3_b5fay")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 194.0
+offset_top = 116.0
+offset_right = 1773.0
+offset_bottom = 533.0
+text = "You win! The Gnorps were able to repair their ship and continue on their path."
+label_settings = SubResource("LabelSettings_vonnw")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

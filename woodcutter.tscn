@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://hbsko6fmq2tt"]
 
 [ext_resource type="Script" path="res://woodcutter.gd" id="1_2ds66"]
-[ext_resource type="Texture2D" uid="uid://xbwis38mna5s" path="res://art/character-sprites/morpho.png" id="2_qdaj2"]
+[ext_resource type="Texture2D" uid="uid://bv3nricvp8xki" path="res://art/environment/lumber.png" id="2_iqyjt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cp7hq"]
-size = Vector2(33, 32)
+size = Vector2(69, 46)
 
-[node name="Woodcutter" type="Area2D"]
+[node name="Woodcutter" type="Area2D" groups=["Daily"]]
+scale = Vector2(3, 3)
 script = ExtResource("1_2ds66")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(2.5, -1)
 shape = SubResource("RectangleShape2D_cp7hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qdaj2")
-flip_v = true
+texture = ExtResource("2_iqyjt")

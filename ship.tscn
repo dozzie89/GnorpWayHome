@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ocliykl1d04j"]
+
+[ext_resource type="Script" path="res://ship.gd" id="1_aqbx5"]
+[ext_resource type="Texture2D" uid="uid://cppxf08y4ere2" path="res://art/environment/ship.png" id="1_oufdr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnh6u"]
+size = Vector2(180, 95)
+
+[node name="Ship" type="Area2D" groups=["Ship"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_aqbx5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oufdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_gnh6u")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -78.0
+offset_top = -155.0
+offset_right = 82.0
+offset_bottom = -54.0
+text = "Repair the ship with:
+25 Spriggo
+25 Plimbloo
+15 Goopa"

@@ -142,14 +142,14 @@ func _on_area_entered(area: Area2D) -> void:
 	
 	if area.is_in_group("Enemies"):
 		hit.emit(area.damage)
-	if area.is_in_group("Tools"):
+	if area.is_in_group("Tools") or area.is_in_group("Ship"):
 		area.show_menu(true)
 
 func _on_area_exited(area: Area2D) -> void:
 	if last_area == area:
 		in_area = false
 		last_area = null
-		if area.is_in_group("Tools"):
+		if area.is_in_group("Tools") or area.is_in_group("Ship"):
 			area.show_menu(false)
 
 

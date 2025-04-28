@@ -30,6 +30,10 @@ func add_resources(r_name, r_num):
 		_:
 			push_error("error with resource - invalid name")
 	update_label()
+	
+func check_win():
+	if(wood >= 175 and ore >= 150 and slime >= 15):
+		get_tree().change_scene_to_file("res://win_screen.tscn")
 
 func update_label():
 	text = "Spriggi: " + str(wood) + '\n'

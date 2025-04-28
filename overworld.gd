@@ -37,17 +37,16 @@ func lose():
 	paused = true
 	
 	var tween = get_tree().create_tween()
-	tween.tween_interval(5)
+	tween.tween_interval(3)
 	tween.tween_callback(restart_game)
 	
 func restart_game():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://title.tscn")
+
 
 #generate resources on daily reset
 func reset():
-	print("GENERATING...")
-	for i in range(rng.randi_range(1, 5)):
-		print("STARTING GENERATION ", i)
+	for i in range(rng.randi_range(8, 16)):
 		var x = rng.randi_range(left_bound, right_bound)
 		var y = rng.randi_range(up_bound, down_bound)
 		
@@ -59,7 +58,5 @@ func reset():
 			new_resource = preload("res://ore.tscn").instantiate()
 			
 		new_resource.position = Vector2(x, y)
-		
-		print("resource ", new_resource, "added at ", new_resource.position)
-			
+					
 		$ResourceCollect.add_child(new_resource)
