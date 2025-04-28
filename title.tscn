@@ -16,6 +16,22 @@ offset_bottom = 1140.0
 texture = ExtResource("2_n015o")
 metadata/_edit_use_anchors_ = true
 
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.508
+anchor_top = 0.304
+anchor_right = 0.508
+anchor_bottom = 0.304
+offset_left = -909.36
+offset_top = -511.32
+offset_right = 909.64
+offset_bottom = 511.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_553w3")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="StartButton" type="Button" parent="."]
 offset_left = 583.0
 offset_top = 638.0
@@ -34,14 +50,6 @@ offset_bottom = 874.0
 scale = Vector2(5, 5)
 text = "EXIT GAME"
 icon = ExtResource("3_qfgvq")
-metadata/_edit_use_anchors_ = true
-
-[node name="Logo" type="TextureRect" parent="."]
-offset_left = 549.0
-offset_top = 153.0
-offset_right = 1320.0
-offset_bottom = 396.0
-texture = ExtResource("4_553w3")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
